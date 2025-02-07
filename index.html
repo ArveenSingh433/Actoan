@@ -254,6 +254,24 @@ p {
         animation: slideInLeft 1s ease-in-out;
     }
 
+    @media (max-width: 768px) { /* Adjust breakpoint as needed */
+  .service-content {
+    height: auto /* Set your desired height */
+  }
+ 
+    .service-content p {
+        font-size: 16px;
+    }
+
+    .service-content h4{
+        font-size: 20px;
+    }
+  
+
+
+}
+
+
 </style>
 <body>
     <!-- Spinner Start -->
@@ -302,59 +320,69 @@ p {
 
     
 
-
     <nav class="navbar navbar-expand-lg navbar-light bg-light px-3 sticky-top">
-        <div class="container-fluid px-4"  > <!-- Used container-fluid for slight margin -->
-            <h2 class="m-0 text-primary">
-                <a href="index.html">
-                    <img src="img/actoan logo.png" alt="Actoan Logo" class="logo">
-                </a>
-            </h2>
+        <div class="container-fluid">
+            <!-- Logo -->
+            <a class="navbar-brand" href="index.html">
+                <img src="img/actoan logo.png" alt="Actoan Logo" class="img-fluid" style="max-height: 75px;">
+            </a>
     
-            <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <!-- Toggler Button -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+                aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
     
+            <!-- Navbar Links -->
             <div class="collapse navbar-collapse" id="navbarCollapse">
-                <div class="navbar-nav ms-auto py-3 py-lg-0">
-                    <a href="index.html" class="nav-item nav-link active">Home</a>
-
-                    <a href="about.html" class="nav-item nav-link ">About Us</a>
+                <ul class="navbar-nav ms-auto align-items-lg-center">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link active">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="about.html" class="nav-link">About Us</a>
+                    </li>
     
-                    <div class="nav-item dropdown">
+                    <!-- Domain Dropdown -->
+                    <li class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Domain</a>
-                        <div class="dropdown-menu rounded-0 rounded-bottom">
-                            <a href="" class="dropdown-item">Pending</a>
-                            <a href="" class="dropdown-item">Pending</a>
-                            <a href="" class="dropdown-item">Pending</a>
-                            <a href="" class="dropdown-item">Pending</a>
-                            <a href="" class="dropdown-item">Pending</a>
-                        </div>
-                    </div>
+                        <ul class="dropdown-menu">
+                            <li><a href="#" class="dropdown-item">Pending</a></li>
+                            <li><a href="#" class="dropdown-item">Pending</a></li>
+                            <li><a href="#" class="dropdown-item">Pending</a></li>
+                            <li><a href="#" class="dropdown-item">Pending</a></li>
+                            <li><a href="#" class="dropdown-item">Pending</a></li>
+                        </ul>
+                    </li>
     
-                    <div class="nav-item dropdown">
+                    <!-- Services Dropdown -->
+                    <li class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Services</a>
-                        <div class="dropdown-menu rounded-0 rounded-bottom">
-                            <a href="" class="dropdown-item">Pending</a>
-                            <a href="" class="dropdown-item">Pending</a>
-                            <a href="" class="dropdown-item">Pending</a>
-                            <a href="" class="dropdown-item">Pending</a>
-                            <a href="404.html" class="dropdown-item">Pending</a>
-                        </div>
-                    </div>
+                        <ul class="dropdown-menu">
+                            <li><a href="#" class="dropdown-item">Pending</a></li>
+                            <li><a href="#" class="dropdown-item">Pending</a></li>
+                            <li><a href="#" class="dropdown-item">Pending</a></li>
+                            <li><a href="#" class="dropdown-item">Pending</a></li>
+                            <li><a href="404.html" class="dropdown-item">Pending</a></li>
+                        </ul>
+                    </li>
     
-                 
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="career.html" class="nav-link">Career</a>
+                    </li>
     
-                    <a href="" class="nav-item nav-link">Products</a>
-                    <a href="career.html" class="nav-item nav-link">Career</a>
-                    <a href="contact.html" class="button button-pulse ms-2">Contact Us</a>
-                </div>
+                    <!-- Contact Button -->
+                    <li class="nav-item">
+                        <a href="contact.html" class="btn btn-primary ms-2">Contact Us</a>
+                    </li>
+                </ul>
             </div>
         </div>
     </nav>
     
-    
-    <!-- Navbar End -->
 
 
     <!-- Carousel Start -->
@@ -431,7 +459,7 @@ p {
                             </div>
                         </div>
                         <div class="service-content">
-                            <h4><a href="service-details.html">AI-Powered Surveillance</a></h4>
+                            <h4>AI-Powered Surveillance</h4>
                             <p>Smart detection, facial recognition, and behavior analytics.</p>
                         </div>
                     </div>
@@ -446,7 +474,7 @@ p {
                             </div>
                         </div>
                         <div class="service-content">
-                            <h4><a href="service-details.html">Ultra-HD <br>Imaging</a></h4>
+                            <h4>Ultra-HD <br>Imaging</h4>
                             <p>Cutting-edge image processing for superior clarity.</p>
                         </div>
                     </div>
@@ -461,7 +489,7 @@ p {
                             </div>
                         </div>
                         <div class="service-content">
-                            <h4><a href="service-details.html">IoT-Integrated Security</a></h4>
+                            <h4>IoT-Integrated Security</h4>
                             <p>Seamless connectivity <br>with smart devices.</p>
                         </div>
                     </div>
@@ -476,7 +504,7 @@ p {
                             </div>
                         </div>
                         <div class="service-content">
-                            <h4><a href="service-details.html">Custom R&D Solutions</a></h4>
+                            <h4>Custom R&D Solutions</h4>
                             <p>Tailored research for specific security challenges.</p>
                         </div>
                     </div>
@@ -491,7 +519,7 @@ p {
                             </div>
                         </div>
                         <div class="service-content">
-                            <h4><a href="service-details.html">Cybersecurity for CCTV</a></h4>
+                            <h4>Cybersecurity for CCTV</h4>
                             <p>Protecting surveillance systems from cyber threats.</p>
                         </div>
                     </div>
@@ -506,39 +534,42 @@ p {
     <!-- Facts Start -->
 
 
-    <!-- About Start -->
-    <div class="container-fluid bg-light overflow-hidden my-5 px-lg-0">
-        <div class="container about px-lg-0">
-            <div class="row g-0 mx-lg-0"> 
-                <div class="col-lg-6 ps-lg-0 d-flex justify-content-center align-items-center wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="position-relative w-100" style="max-width: 400px; min-height: 280px;">
-                
-                        <img class="img-fluid w-100 h-auto rounded" src="img/about2.png" style="object-fit: cover;" alt="">
-                    </div>
+<!-- About Start -->
+<div class="container-fluid" style="background-color: #ececec;">
+<div class="container overflow-hidden my-5">
+    <div class="bg- rounded px-3 px-md-4 px-lg-5 py-5">
+        <div class="row g-5 align-items-center">
+            <!-- Image Section -->
+            <div class="col-lg-6 d-flex justify-content-center wow fadeInUp" data-wow-delay="0.5s">
+                <div class="position-relative w-100" style="max-width: 400px; min-height: 280px;">
+                    <img class="img-fluid w-100 h-auto rounded" src="img/about2.png" style="object-fit: cover;" alt="About Us Image">
                 </div>
-                <div class="col-lg-6 about-text py-5 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="p-lg-5 pe-lg-0">
-                   
-                        <h1 class="display-5 mb-4">About <span style="color: #023ba4;">Us</span> </h1>
-                        <div class="bg-primary mb-3" style="width: 60px; height: 2px;"></div>
-                        <p class="mb-4 pb-2" style="color: #353535;"> 
-                            At <strong>Actoan Techlabs Pvt Ltd,</strong> we specialize in cutting-edge research and development in the CCTV camera industry. 
-                            Our mission is to revolutionize surveillance technology with innovative, high-performance, and AI-driven security solutions. 
-                            Whether you're looking for advanced imaging, real-time analytics, or next-generation security systems, we are at the forefront of innovation.
-                        </p>
-                        <p class="mb-4 pb-2" style="color: #353535;">
-                            We strongly believe in Inclusive Growth, Empowering the team, and providing an environment conducive to incubating new ideas, 
-                            creating innovation, and excellence in technology solutions that enable customer success.
-                        </p>
-                        
-                        <a href="" class="btn btn-primary rounded-pill py-3 px-5 mb-4">Know More</a>
-                    </div>
+            </div>
+
+            <!-- Text Section -->
+            <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
+                <div class="p-3 p-md-4 p-lg-5">
+                    <h1 class="display-5 mb-4">About <span style="color: #023ba4;">Us</span></h1>
+                    <div class="bg-primary mb-3" style="width: 60px; height: 2px;"></div>
+                    <p class="mb-4 pb-2 text-muted"> 
+                        At <strong>Actoan Techlabs Pvt Ltd,</strong> we specialize in cutting-edge research and development in the CCTV camera industry. 
+                        Our mission is to revolutionize surveillance technology with innovative, high-performance, and AI-driven security solutions. 
+                        Whether you're looking for advanced imaging, real-time analytics, or next-generation security systems, we are at the forefront of innovation.
+                    </p>
+                    <p class="mb-4 pb-2 text-muted">
+                        We strongly believe in Inclusive Growth, Empowering the team, and providing an environment conducive to incubating new ideas, 
+                        creating innovation, and excellence in technology solutions that enable customer success.
+                    </p>
+                    <a href="#" class="btn btn-primary rounded-pill py-3 px-5 mb-4">Know More</a>
                 </div>
             </div>
         </div>
     </div>
-    
-    <!-- About End -->
+</div>
+</div>
+<!-- About End -->
+
+
 
 
     <!-- Service Start -->

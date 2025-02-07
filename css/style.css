@@ -6,6 +6,10 @@
     --dark: #161616;
 }
 
+/* body{
+    background-color:#fff ;
+} */
+
 .fw-medium {
     font-weight: 500 !important;
 }
@@ -703,9 +707,7 @@
     clear: both;
 }
 
-.cameras .titlepage {
-    /* padding-bottom: 20px; */
-}
+
 
 .row {
     justify-content: center;
@@ -875,6 +877,4 @@
         }
     }
 
-
-
-   
+}
