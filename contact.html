@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Contact Us- Actoan Techlabs Pvt. Ltd.</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="img/actoan logo.png" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&family=Roboto:wght@500;700;900&display=swap" rel="stylesheet"> 
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<style>
+    /* Add left and right margin to navbar */
+    .navbar {
+           margin-left: 0px;
+           margin-right: 0px;
+       }
+   
+       /* Active and Hover Effects on Nav Links */
+       .nav-link {
+           position: relative; /* To position the red outline */
+           transition: all 0.3s ease; /* Smooth transition */
+       }
+   
+       /* Red Outline on Hover and Active State */
+       .nav-link:hover, .nav-link.active {
+           transition: width 0.4s ease-in-out, left 0.4s ease-in-out; /* Smooth animation */
+           color: #0741ad !important; /* Red text color */
+       }
+   
+       .nav-link:hover::after, .nav-link.active::after {
+           content: "";
+           position: absolute;
+           bottom: 0;
+           left: 0;
+           width: 100%;
+           height: 2px;
+           background-color: #0741ad;
+           transition: width 0.4s ease-in-out, left 0.4s ease-in-out; /* Smooth animation */
+   
+           
+       }
+   
+       .nav-link:hover::after {
+       transition: width 0.4s ease-in-out, left 0.4s ease-in-out, transform 0.2s ease-in-out;
+       transform: scaleX(1.1);
+       
+   }
+       
+   
+       /* Optional: Adjust the Navbar items for better spacing */
+       .navbar-nav {
+           margin-left: auto;
+           display: flex;
+           align-items: center;
+       }
+   
+       /* Responsive behavior */
+       @media (max-width: 768px) {
+           .navbar {
+               /* margin-left: 10px;
+               margin-right: 10px; */
+           }
+       }
+   
+   
+       /* Responsive Logo */
+       .logo {
+           height: auto;
+           width: 100%;  /* Ensures logo scales properly */
+           max-height: 85px; /* Max height for larger screens */
+           transition: transform 0.3s ease-in-out;
+       }
+   
+       /* Optional: Hover effect for logo */
+       .navbar-brand:hover .logo {
+           transform: scale(1.05); /* Slightly enlarge logo on hover */
+       }
+   
+       /* Navbar adjustment for small screen sizes */
+       .navbar-nav {
+           margin-left: auto; /* Right align the navbar items */
+       }
+   
+       /* Adjust logo size on mobile */
+       @media (max-width: 768px) {
+           .logo {
+               max-height: 50px; /* Smaller logo for mobile */
+           }
+   
+           .navbar-nav {
+               margin-top: 15px; /* Add top margin to make space for logo */
+           }
+       }
+   
+       /* Mobile navbar items spacing */
+       @media (max-width: 576px) {
+           .navbar-nav {
+               text-align: center; /* Center align navbar items on mobile */
+           }
+   
+           .navbar-nav .nav-link {
+               padding-left: 10px;
+               padding-right: 10px;
+           }
+   
+           .navbar-toggler {
+               margin-right: 10px; /* Space out the navbar toggle button */
+           }
+       }
+   
+       /* Social media buttons styles */
+       .btn-square {
+           border-radius: 50%;
+       }
+   
+       .navbar-toggler-icon {
+           background-color: #ffffff; /* Make the navbar toggler icon more visible */
+       }
+   
+      
+   /* Pulse Button */
+   .button {
+     display: inline-block;
+     padding: 10px 20px;
+     font-size: 18px;
+     font-weight: bold;
+     color: white;
+     background: #023ba4;
+     border-radius: 8px;
+     text-decoration: none;
+     transition: transform 0.3s ease, background 0.3s ease;
+     position: relative;
+     overflow: hidden;
+   }
+   
+   /* Button Hover */
+   .button:hover {
+       color: #ffffff;
+     background: #023ba4;
+     transform: scale(1.05);
+   }
+   
+   /* Pulse Effect */
+   .button-pulse {
+     animation: pulse 2s infinite 3s cubic-bezier(0.25, 0, 0, 1);
+     box-shadow: 0 0 0 0 rgba(1, 22, 139, 0.8);
+   }
+   
+   @keyframes pulse {
+     0% {
+       box-shadow: 0 0 0 0 rgba(96, 146, 255, 0.8);
+     }
+     100% {
+       box-shadow: 0 0 0 18px rgba(255, 87, 51, 0);
+     }
+   }
+   
+   /* Floating Effect */
+   .button-float {
+     animation: float 1.5s ease-in-out infinite alternate;
+   }
+   
+   @keyframes float {
+     50% {
+       transform: translateY(-5px);
+     }
+     100% {
+       transform: translateY(-15px);
+     }
+   }
+   
+   /* Typography */
+   h1 {
+     font-weight: 300;
+     font-size: 2.2em;
+     line-height: 1.3;
+     padding-top: 40px;
+   }
+   
+   p {
+     font-size: 1.0em;
+     opacity: 0.85;
+     /* padding: 10px 20px; */
+   }
+   
+   /* Responsive Design */
+   @media (max-width: 600px) {
+     nav {
+       flex-direction: column;
+       gap: 10px;
+     }
+     
+     .button {
+       width: 80%;
+     }
+   }
+   
+   
+   .owl-carousel-item {
+       height: 80vh; /* Set height to 80% of viewport height */
+   }
+   
+   .owl-carousel-item img {
+       height: 100%;
+       object-fit: cover; /* Ensures the image covers the div without distortion */
+   }
+   
+   
+   
+   
+   
+   </style>
+<body>
+    <!-- Spinner Start -->
+ 
+    <!-- Spinner End -->
+
+
+    <!-- Topbar Start -->
+    
+    <!-- Topbar End -->
+
+
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light px-3 sticky-top">
+        <div class="container-fluid px-4"  > <!-- Used container-fluid for slight margin -->
+            <h2 class="m-0 text-primary">
+                <a href="index.html">
+                    <img src="img/actoan logo.png" alt="Actoan Logo" class="logo">
+                </a>
+            </h2>
+            <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+    
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav ms-auto py-3 py-lg-0">
+                    <a href="index.html" class="nav-item nav-link ">Home</a>
+
+                    <a href="about.html" class="nav-item nav-link ">About Us</a>
+    
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Domain</a>
+                        <div class="dropdown-menu rounded-0 rounded-bottom">
+                            <a href="" class="dropdown-item">Pending</a>
+                            <a href="" class="dropdown-item">Pending</a>
+                            <a href="" class="dropdown-item">Pending</a>
+                            <a href="" class="dropdown-item">Pending</a>
+                            <a href="" class="dropdown-item">Pending</a>
+                        </div>
+                    </div>
+    
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Services</a>
+                        <div class="dropdown-menu rounded-0 rounded-bottom">
+                            <a href="" class="dropdown-item">Pending</a>
+                            <a href="" class="dropdown-item">Pending</a>
+                            <a href="" class="dropdown-item">Pending</a>
+                            <a href="" class="dropdown-item">Pending</a>
+                            <a href="404.html" class="dropdown-item">Pending</a>
+                        </div>
+                    </div>
+    
+                 
+    
+                    <a href="" class="nav-item nav-link">Products</a>
+                    <a href="career.html" class="nav-item nav-link">Career</a>
+                    <a href="contact.html" class="button button-pulse ms-2 active">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- Navbar End -->
+
+
+    <!-- Page Header Start -->
+    <div class="container-fluid page-headerss py-5">
+        <div class="container py-5">
+            <h1 class="display-3 text-white mb-3 animated slideInDown">Contact Us</h1>
+            <nav aria-label="breadcrumb animated slideInDown">
+                <ol class="breadcrumb">
+               
+                </ol>
+            </nav>
+        </div>
+    </div>
+    <!-- Page Header End -->
+
+
+    <!-- Contact Start -->
+    <div class="container-fluid bg-light overflow-hidden px-lg-0">
+        <div class="container contact px-lg-0">
+            <div class="row g-0 mx-lg-0">
+                <div class="col-lg-6 contact-text py-5 wow fadeIn" data-wow-delay="0.5s">
+                    <div class="p-lg-5 ps-lg-0">
+                        <div class="section-title text-start">
+                            <h1 class="display-5 mb-4">Contact Us</h1>
+                        </div>
+                        <p class="mb-4"><p class="mb-4">Get in touch with us for any inquiries or support. Fill out the form, and we will get back to you shortly.</p>
+
+                        <form action="mailto:info@actoan.in" method="post" enctype="text/plain">
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control" id="name" name="name" placeholder="Your Name">
+                                        <label for="name">Your Name</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-floating">
+                                        <input type="email" class="form-control" id="email" name="email" placeholder="Your Email">
+                                        <label for="email">Your Email</label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control" id="subject" name="subject" placeholder="Subject">
+                                        <label for="subject">Subject</label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-floating">
+                                        <textarea class="form-control" placeholder="Leave a message here" id="message" name="message" style="height: 100px"></textarea>
+                                        <label for="message">Message</label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <button class="btn btn-primary w-100 py-3" type="submit">Send Message</button>
+                                </div>
+                            </div>
+                        </form>
+                        
+                    </div>
+                </div>
+                <div class="col-lg-6 pe-lg-0 mt-4 mb-4" style="min-height: 400px;">
+                    <div class="position-relative h-100">
+                        <div class="mapouter"><div class="gmap_canvas"><iframe class="gmap_iframe" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=660&amp;height=670&amp;hl=en&amp;q=UWave One , Gold Office,  G1-25/11, 25th Floor, Sector -18 , Noida,  Uttar Pradesh-201301,  Indianiversity of Oxford&amp;t=&amp;z=15&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe><a href="https://sprunkin.com/">Sprunki Game</a></div><style>.mapouter{position:relative;text-align:right;width:660px;height:670px;}.gmap_canvas {overflow:hidden;background:none!important;width:660px;height:670px;}.gmap_iframe {width:660px!important;height:670px!important;}</style></div>
+                     
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Contact End -->
+
+ <!-- Footer Start -->
+ <div class="container-fluid footer py-5 wow fadeIn" data-wow-delay="0.1s" style="background-color: rgb(26, 26, 26); color: white;">
+    <div class="container py-5 ">
+        <div class="row g-5 ">
+            <div class="col-lg-4 col-md-6">
+                <h5 class="mb-4" style="color: white;">Address</h5>
+                <p class="mb-2 mb-4"><i class="fa fa-map-marker-alt me-3"></i>Wave One , Gold Office, 
+                    G1-25/11, 25th Floor,
+                    Sector -18 , Noida, 
+                    Uttar Pradesh-201301, 
+                    India</p>
+                <!-- <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+012 345 67890</p> -->
+                <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@actoan.in</p>
+                <!-- <div class="d-flex pt-2">
+                    <a class="btn btn-square rounded-circle me-2" href="" style="border: 1px solid white; color: white;"><i class="fab fa-twitter"></i></a>
+                    <a class="btn btn-square rounded-circle me-2" href="" style="border: 1px solid white; color: white;"><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-square rounded-circle me-2" href="" style="border: 1px solid white; color: white;"><i class="fab fa-youtube"></i></a>
+                    <a class="btn btn-square rounded-circle me-2" href="" style="border: 1px solid white; color: white;"><i class="fab fa-linkedin-in"></i></a>
+                </div> -->
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <h5 class="mb-4" style="color: white;">Services</h5>
+                <a class="btn btn-link" href="" style="color: white; text-decoration: none;">AI-Powered Surveillance </a>
+                <a class="btn btn-link" href="" style="color: white; text-decoration: none;">Ultra-HD Imaging </a>
+                <a class="btn btn-link" href="" style="color: white; text-decoration: none;">IoT-Integrated Security </a>
+                <a class="btn btn-link" href="" style="color: white; text-decoration: none;">Custom R&D Solutions </a>
+                <a class="btn btn-link" href="" style="color: white; text-decoration: none;">Cybersecurity for CCTV </a>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <h5 class="mb-4" style="color: white;">Quick Links</h5>
+                <a class="btn btn-link" href="about.html" style="color: white; text-decoration: none;">About Us</a>
+                <a class="btn btn-link" href="contact.html" style="color: white; text-decoration: none;">Contact Us</a>
+                <a class="btn btn-link" href="career.html" style="color: white; text-decoration: none;">Career/a>
+                <a class="btn btn-link" href="" style="color: white; text-decoration: none;">Products</a>
+              
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Footer End -->
+
+
+<!-- Copyright Start -->
+<div class="container-fluid py-4" style="background: #000000;">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                &copy; <a class="border-bottom" href="#">Actoan</a>, All Right Reserved.
+            </div>
+          
+        </div>
+    </div>
+</div>
+<!-- Copyright End -->
+
+    <!-- Copyright End -->
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/isotope/isotope.pkgd.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
