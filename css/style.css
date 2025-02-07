@@ -115,7 +115,7 @@
 }
 
 @media (max-width: 991.98px) {
-    .navbar .navbar-nav .nav-link  {
+    .navbar .navbar-nav .nav-link {
         margin-right: 0;
         padding: 10px 0;
     }
@@ -167,7 +167,7 @@
         position: relative;
         min-height: 500px;
     }
-    
+
     .header-carousel .owl-carousel-item img {
         position: absolute;
         width: 100%;
@@ -268,18 +268,19 @@
     background: linear-gradient(rgba(22, 22, 22, .7), rgba(22, 22, 22, .7)), url(../img/aboutus.jpg) center center no-repeat;
     background-size: cover;
 }
+
 .page-headerss {
     background: linear-gradient(rgba(22, 22, 22, .7), rgba(22, 22, 22, .7)), url(../img/contact..jpg) center center no-repeat;
     background-size: cover;
 }
 
 
-.page-headerr{
+.page-headerr {
     background: linear-gradient(rgba(22, 22, 22, .7), rgba(22, 22, 22, .7)), url(../img/Career.jpg) center center no-repeat;
     background-size: cover;
 }
 
-.breadcrumb-item + .breadcrumb-item::before {
+.breadcrumb-item+.breadcrumb-item::before {
     color: var(--light);
 }
 
@@ -290,19 +291,19 @@
         max-width: 100% !important;
     }
 
-    .about-text  {
+    .about-text {
         padding-right: calc(((100% - 960px) / 2) + .75rem);
     }
 }
 
 @media (min-width: 1200px) {
-    .about-text  {
+    .about-text {
         padding-right: calc(((100% - 1140px) / 2) + .75rem);
     }
 }
 
 @media (min-width: 1400px) {
-    .about-text  {
+    .about-text {
         padding-right: calc(((100% - 1320px) / 2) + .75rem);
     }
 }
@@ -341,19 +342,19 @@
         max-width: 100% !important;
     }
 
-    .feature-text  {
+    .feature-text {
         padding-left: calc(((100% - 960px) / 2) + .75rem);
     }
 }
 
 @media (min-width: 1200px) {
-    .feature-text  {
+    .feature-text {
         padding-left: calc(((100% - 1140px) / 2) + .75rem);
     }
 }
 
 @media (min-width: 1400px) {
-    .feature-text  {
+    .feature-text {
         padding-left: calc(((100% - 1320px) / 2) + .75rem);
     }
 }
@@ -410,19 +411,19 @@
         max-width: 100% !important;
     }
 
-    .quote-text  {
+    .quote-text {
         padding-right: calc(((100% - 960px) / 2) + .75rem);
     }
 }
 
 @media (min-width: 1200px) {
-    .quote-text  {
+    .quote-text {
         padding-right: calc(((100% - 1140px) / 2) + .75rem);
     }
 }
 
 @media (min-width: 1400px) {
-    .quote-text  {
+    .quote-text {
         padding-right: calc(((100% - 1320px) / 2) + .75rem);
     }
 }
@@ -542,19 +543,19 @@
         max-width: 100% !important;
     }
 
-    .contact-text  {
+    .contact-text {
         padding-left: calc(((100% - 960px) / 2) + .75rem);
     }
 }
 
 @media (min-width: 1200px) {
-    .contact-text  {
+    .contact-text {
         padding-left: calc(((100% - 1140px) / 2) + .75rem);
     }
 }
 
 @media (min-width: 1400px) {
-    .contact-text  {
+    .contact-text {
         padding-left: calc(((100% - 1320px) / 2) + .75rem);
     }
 }
@@ -591,8 +592,7 @@
 
 .row {
     display: -ms-flexbox;
-    display: flex
-;
+    display: flex;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     margin-right: -15px;
@@ -737,41 +737,47 @@
     margin: 0;
 }
 
-.see_camera{
+.see_camera {
     margin-bottom: 70px;
 }
 
-.cameras_text .read_more { 
-    border-radius: 5px; 
-    font-weight: normal; 
+.cameras_text .read_more {
+    border-radius: 5px;
+    font-weight: normal;
     font-size: 15px;
-    max-width: 128px; 
-    height: 38px; 
+    max-width: 128px;
+    height: 38px;
     line-height: 38px;
-    transition: ease-in all 0.5s; 
- }
+    transition: ease-in all 0.5s;
+}
+
 #ho_bg:hover.cameras_text {
     background: #0741ad;
     transition: ease-in all 0.5s;
     cursor: pointer;
 }
+
 #ho_bg:hover.cameras_text p {
     color: #fff;
     transition: ease-in all 0.5s;
 }
+
 #ho_bg:hover.cameras_text p span {
     color: #fff;
     transition: ease-in all 0.5s;
 }
+
 #ho_bg:hover.cameras_text h3 {
     color: #fff;
     transition: ease-in all 0.5s;
 }
+
 #ho_bg:hover.cameras_text .read_more {
     background: #fff;
     color: #000;
     transition: ease-in all 0.5s;
 }
+
 .see_camera .read_more {
     margin: 0 auto;
     display: block;
@@ -786,9 +792,11 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 100px;  /* Adjust circle size */
+    width: 100px;
+    /* Adjust circle size */
     height: 100px;
-    background-color: rgba(0, 0, 0, 0.1); /* Light grey/transparent */
+    background-color: rgba(0, 0, 0, 0.1);
+    /* Light grey/transparent */
     border-radius: 50%;
     transform: translate(-50%, -50%);
     z-index: -1;
@@ -802,11 +810,13 @@
 
 
 .cameras_img img {
-    transition: transform 0.4s ease-in-out; /* Smooth and gradual scaling */
+    transition: transform 0.4s ease-in-out;
+    /* Smooth and gradual scaling */
 }
 
 .cameras_img:hover img {
-    transform: scale(1.1); /* Scale up smoothly on hover */
+    transform: scale(1.1);
+    /* Scale up smoothly on hover */
 }
 
 
@@ -815,6 +825,7 @@
     .feature-text {
         padding: 20px !important;
     }
+
     .feature-text::before {
         content: "";
         position: absolute;
@@ -822,7 +833,7 @@
         left: 0;
         width: 100%;
         height: 100%;
-        background-image: url('img/aboutbackground.jpg');
+        background-image: url('../img/aboutbackground.jpg');
         background-size: cover;
         background-position: center;
         z-index: -1;
@@ -830,40 +841,31 @@
 
 
 
-    @media screen and (max-width: 768px) {
-        .service-content {
-            height: auto; /* Allow height to adjust dynamically */
-        }
-    }
-
-
-
-
     @media (max-width: 768px) {
-      
-        
+
+
         .cameras .row {
             justify-content: center;
         }
-    
+
         .cameras_text {
             text-align: center;
             padding: 15px;
             margin-bottom: 20px;
         }
-    
+
         .cameras_text h4 {
             font-size: 1.2rem;
         }
-    
+
         .cameras_text p {
             font-size: 0.9rem;
         }
-    
+
         .col-md-3 {
             width: 100%;
         }
-    
+
         .cameras_img img {
             max-width: 80%;
             height: auto;
@@ -878,3 +880,22 @@
     }
 
 }
+
+
+.owl-dots {
+    text-align: center;
+    margin-top: 20px;
+  }
+  .owl-dot {
+    width: 12px;
+    height: 12px;
+    margin: 5px;
+    background: #ccc;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+  }
+  .owl-dot.active {
+    background: #0b52d8; /* Active dot color */
+  }
+  
