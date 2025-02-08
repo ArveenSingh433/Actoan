@@ -32,6 +32,130 @@
     <link href="css/style.css" rel="stylesheet">
 </head>
 <style>
+
+.navbar {
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+
+    /* Active and Hover Effects on Nav Links */
+    .nav-link {
+        position: relative;
+        /* To position the red outline */
+        transition: all 0.3s ease;
+        /* Smooth transition */
+    }
+
+    /* Red Outline on Hover and Active State */
+    .nav-link:hover,
+    .nav-link.active {
+        transition: width 0.4s ease-in-out, left 0.4s ease-in-out;
+        /* Smooth animation */
+        color: #0741ad !important;
+        /* Red text color */
+    }
+
+    .nav-link:hover::after,
+    .nav-link.active::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background-color: #0741ad;
+        transition: width 0.4s ease-in-out, left 0.4s ease-in-out;
+        /* Smooth animation */
+
+
+    }
+
+    .nav-link:hover::after {
+        transition: width 0.4s ease-in-out, left 0.4s ease-in-out, transform 0.2s ease-in-out;
+        transform: scaleX(1.1);
+
+    }
+
+
+    /* Optional: Adjust the Navbar items for better spacing */
+    .navbar-nav {
+        margin-left: auto;
+        display: flex;
+        align-items: center;
+    }
+
+    /* Responsive behavior */
+    @media (max-width: 768px) {
+        .navbar {
+            /* margin-left: 10px;
+            margin-right: 10px; */
+        }
+    }
+
+
+    /* Responsive Logo */
+    .logo {
+        height: auto;
+        width: 100%;
+        /* Ensures logo scales properly */
+        max-height: 85px;
+        /* Max height for larger screens */
+        transition: transform 0.3s ease-in-out;
+    }
+
+    /* Optional: Hover effect for logo */
+    .navbar-brand:hover .logo {
+        transform: scale(1.05);
+        /* Slightly enlarge logo on hover */
+    }
+
+    /* Navbar adjustment for small screen sizes */
+    .navbar-nav {
+        margin-left: auto;
+        /* Right align the navbar items */
+    }
+
+    /* Adjust logo size on mobile */
+    @media (max-width: 768px) {
+        .logo {
+            max-height: 50px;
+            /* Smaller logo for mobile */
+        }
+
+        .navbar-nav {
+            margin-top: 15px;
+            /* Add top margin to make space for logo */
+        }
+    }
+
+    /* Mobile navbar items spacing */
+    @media (max-width: 576px) {
+        .navbar-nav {
+            text-align: center;
+            /* Center align navbar items on mobile */
+        }
+
+        .navbar-nav .nav-link {
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+
+        .navbar-toggler {
+            margin-right: 10px;
+            /* Space out the navbar toggle button */
+        }
+    }
+
+    /* Social media buttons styles */
+    .btn-square {
+        border-radius: 50%;
+    }
+
+    .navbar-toggler-icon {
+        background-color: #ffffff;
+        /* Make the navbar toggler icon more visible */
+    }
+
   .card-wrapper{
     max-width: 1400px;
     margin: 0 auto;
@@ -272,69 +396,54 @@ img{
             </button>
 
             <!-- Navbar Links -->
-            <nav class="navbar navbar-expand-lg navbar-light bg-light px-3 sticky-top">
-                <div class="container-fluid">
-                    <!-- Logo -->
-                    <a class="navbar-brand" href="index.html">
-                        <img src="img/actoan logo.png" alt="Actoan Logo" class="img-fluid" style="max-height: 75px;">
-                    </a>
-            
-                    <!-- Toggler Button -->
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
-                        aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-            
-                    <!-- Navbar Links -->
-                    <div class="collapse navbar-collapse" id="navbarCollapse">
-                        <ul class="navbar-nav ms-auto align-items-lg-center text-center">
-                            <li class="nav-item">
-                                <a href="index.html" class="nav-link active">Home</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="about.html" class="nav-link">About Us</a>
-                            </li>
-            
-                            <!-- Domain Dropdown -->
-                            <li class="nav-item dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Domain</a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="#" class="dropdown-item">Pending</a></li>
-                                    <li><a href="#" class="dropdown-item">Pending</a></li>
-                                    <li><a href="#" class="dropdown-item">Pending</a></li>
-                                    <li><a href="#" class="dropdown-item">Pending</a></li>
-                                    <li><a href="#" class="dropdown-item">Pending</a></li>
-                                </ul>
-                            </li>
-            
-                            <!-- Services Dropdown -->
-                            <li class="nav-item dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Services</a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="#" class="dropdown-item">Pending</a></li>
-                                    <li><a href="#" class="dropdown-item">Pending</a></li>
-                                    <li><a href="#" class="dropdown-item">Pending</a></li>
-                                    <li><a href="#" class="dropdown-item">Pending</a></li>
-                                    <li><a href="404.html" class="dropdown-item">Pending</a></li>
-                                </ul>
-                            </li>
-            
-                            <li class="nav-item">
-                                <a href="Products.html" class="nav-link">Products</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="career.html" class="nav-link">Career</a>
-                            </li>
-            
-                            <!-- Contact Button -->
-                            <li class="nav-item">
-                                <a href="contact.html" class="btn btn-primary ms-lg-2 mt-2 mt-lg-0 pulsing-btn">Contact Us</a>
-                            </li>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav ms-auto align-items-lg-center">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link active">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="about.html" class="nav-link">About Us</a>
+                    </li>
+
+                    <!-- Domain Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Domain</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#" class="dropdown-item">Pending</a></li>
+                            <li><a href="#" class="dropdown-item">Pending</a></li>
+                            <li><a href="#" class="dropdown-item">Pending</a></li>
+                            <li><a href="#" class="dropdown-item">Pending</a></li>
+                            <li><a href="#" class="dropdown-item">Pending</a></li>
                         </ul>
-                    </div>
-                </div>
-            </nav>
-            
+                    </li>
+
+                    <!-- Services Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Services</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#" class="dropdown-item">Pending</a></li>
+                            <li><a href="#" class="dropdown-item">Pending</a></li>
+                            <li><a href="#" class="dropdown-item">Pending</a></li>
+                            <li><a href="#" class="dropdown-item">Pending</a></li>
+                            <li><a href="404.html" class="dropdown-item">Pending</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="Products.html" class="nav-link">Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="career.html" class="nav-link">Career</a>
+                    </li>
+
+                    <!-- Contact Button -->
+                    <li class="nav-item">
+                        <a href="contact.html" class="btn btn-primary ms-2 pulsing-btn">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
     <!-- Navbar End -->
 
 
