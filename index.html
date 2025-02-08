@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Products- Actoan Techlabs </title>
+    <title>Actoan Techlabs </title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
@@ -11,10 +11,16 @@
     <!-- Favicon -->
     <link href="img/actoan logo.png" rel="icon">
 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.1/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="http://themes.audemedia.com/html/goodgrowth/css/owl.theme.default.min.css">
+
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&family=Roboto:wght@500;700;900&display=swap" rel="stylesheet"> 
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&family=Roboto:wght@500;700;900&display=swap"
+        rel="stylesheet">
 
     <!-- Icon Font Stylesheet -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
@@ -30,11 +36,288 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+    <link href="css/style2.css" rel="stylesheet">
 </head>
+<style>
+    /* Add left and right margin to navbar */
+    .navbar {
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+
+    /* Active and Hover Effects on Nav Links */
+    .nav-link {
+        position: relative;
+        /* To position the red outline */
+        transition: all 0.3s ease;
+        /* Smooth transition */
+    }
+
+    /* Red Outline on Hover and Active State */
+    .nav-link:hover,
+    .nav-link.active {
+        transition: width 0.4s ease-in-out, left 0.4s ease-in-out;
+        /* Smooth animation */
+        color: #0741ad !important;
+        /* Red text color */
+    }
+
+    .nav-link:hover::after,
+    .nav-link.active::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background-color: #0741ad;
+        transition: width 0.4s ease-in-out, left 0.4s ease-in-out;
+        /* Smooth animation */
+
+
+    }
+
+    .nav-link:hover::after {
+        transition: width 0.4s ease-in-out, left 0.4s ease-in-out, transform 0.2s ease-in-out;
+        transform: scaleX(1.1);
+
+    }
+
+
+    /* Optional: Adjust the Navbar items for better spacing */
+    .navbar-nav {
+        margin-left: auto;
+        display: flex;
+        align-items: center;
+    }
+
+    /* Responsive behavior */
+    @media (max-width: 768px) {
+        .navbar {
+            /* margin-left: 10px;
+            margin-right: 10px; */
+        }
+    }
+
+
+    /* Responsive Logo */
+    .logo {
+        height: auto;
+        width: 100%;
+        /* Ensures logo scales properly */
+        max-height: 85px;
+        /* Max height for larger screens */
+        transition: transform 0.3s ease-in-out;
+    }
+
+    /* Optional: Hover effect for logo */
+    .navbar-brand:hover .logo {
+        transform: scale(1.05);
+        /* Slightly enlarge logo on hover */
+    }
+
+    /* Navbar adjustment for small screen sizes */
+    .navbar-nav {
+        margin-left: auto;
+        /* Right align the navbar items */
+    }
+
+    /* Adjust logo size on mobile */
+    @media (max-width: 768px) {
+        .logo {
+            max-height: 50px;
+            /* Smaller logo for mobile */
+        }
+
+        .navbar-nav {
+            margin-top: 15px;
+            /* Add top margin to make space for logo */
+        }
+    }
+
+    /* Mobile navbar items spacing */
+    @media (max-width: 576px) {
+        .navbar-nav {
+            text-align: center;
+            /* Center align navbar items on mobile */
+        }
+
+        .navbar-nav .nav-link {
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+
+        .navbar-toggler {
+            margin-right: 10px;
+            /* Space out the navbar toggle button */
+        }
+    }
+
+    /* Social media buttons styles */
+    .btn-square {
+        border-radius: 50%;
+    }
+
+    .navbar-toggler-icon {
+        background-color: #ffffff;
+        /* Make the navbar toggler icon more visible */
+    }
+
+
+    /* Pulse Button */
+    .button {
+        display: inline-block;
+        padding: 10px 20px;
+        font-size: 18px;
+        font-weight: bold;
+        color: white;
+        background: #023ba4;
+        border-radius: 8px;
+        text-decoration: none;
+        transition: transform 0.3s ease, background 0.3s ease;
+        position: relative;
+        overflow: hidden;
+    }
+
+    /* Button Hover */
+    .button:hover {
+        color: #ffffff;
+        background: #023ba4;
+        transform: scale(1.05);
+    }
+
+    /* Pulse Effect */
+    .button-pulse {
+        animation: pulse 2s infinite 3s cubic-bezier(0.25, 0, 0, 1);
+        box-shadow: 0 0 0 0 rgba(1, 22, 139, 0.8);
+    }
+
+    @keyframes pulse {
+        0% {
+            box-shadow: 0 0 0 0 rgba(96, 146, 255, 0.8);
+        }
+
+        100% {
+            box-shadow: 0 0 0 18px rgba(255, 87, 51, 0);
+        }
+    }
+
+    /* Floating Effect */
+    .button-float {
+        animation: float 1.5s ease-in-out infinite alternate;
+    }
+
+    @keyframes float {
+        50% {
+            transform: translateY(-5px);
+        }
+
+        100% {
+            transform: translateY(-15px);
+        }
+    }
+
+    /* Typography */
+    h1 {
+        font-weight: 300;
+        font-size: 2.2em;
+        line-height: 1.3;
+        padding-top: 40px;
+    }
+
+    p {
+        font-size: 1.0em;
+        opacity: 0.85;
+        /* padding: 10px 20px; */
+    }
+
+    /* Responsive Design */
+    @media (max-width: 600px) {
+        nav {
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .button {
+            width: 80%;
+        }
+    }
+
+
+    .owl-carousel-item {
+        height: 80vh;
+    }
+
+    .owl-carousel-item img {
+        height: 100%;
+        object-fit: cover;
+    }
+
+
+
+    @keyframes blurToClear {
+        from {
+            filter: blur(20px);
+            opacity: 0;
+        }
+
+        to {
+            filter: blur(0);
+            opacity: 1;
+        }
+    }
+
+    .animated.blurToClear {
+        animation: blurToClear 1s ease-in-out;
+    }
+
+    .animated.slideInRight {
+        animation: slideInRight 1s ease-in-out;
+    }
+
+    .animated.slideInLeft {
+        animation: slideInLeft 1s ease-in-out;
+    }
+    .service-content h4 {
+    font-size: 18.2px; /* Default font size */
+}
+
+/* For screens up to 1337px */
+@media (max-width: 1337px) {
+
+    .service-content p {
+        font-size: 14px;
+    }
+
+    .service-content h4 {
+        font-size: 18px; /* Override default */
+    }
+}
+
+/* For screens up to 768px */
+@media (max-width: 768px) {
+    .service-content {
+        height: auto;
+    }
+
+    .service-content p {
+        font-size: 16px;
+    }
+
+    .service-content h4 {
+        font-size: 20px; /* Override previous styles */
+    }
+}
+
+
+
+
+</style>
 
 <body>
     <!-- Spinner Start -->
-    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+    <div id="spinner"
+        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
         <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
             <span class="sr-only">Loading...</span>
         </div>
@@ -43,6 +326,42 @@
 
 
     <!-- Topbar Start -->
+    <!-- <div class="container-fluid bg-dark px-5">
+        <div class="row gx-4 d-none d-lg-flex">
+            <div class="col-lg-6 text-start">
+                <div class="h-100 d-inline-flex align-items-center py-3 me-4">
+                    <div class="btn-sm-square rounded-circle bg-primary me-2">
+                        <small class="fa fa-map-marker-alt text-white"></small>
+                    </div>
+                    <small>123 Street, New York, USA</small>
+                </div>
+                <div class="h-100 d-inline-flex align-items-center py-3">
+                    <div class="btn-sm-square rounded-circle bg-primary me-2">
+                        <small class="fa fa-envelope-open text-white"></small>
+                    </div>
+                    <small>info@example.com</small>
+                </div>
+            </div>
+            <div class="col-lg-6 text-end">
+                <div class="h-100 d-inline-flex align-items-center py-3 me-4">
+                    <div class="btn-sm-square rounded-circle bg-primary me-2">
+                        <small class="fa fa-phone-alt text-white"></small>
+                    </div>
+                    <small>+012 345 6789</small>
+                </div>
+                <div class="h-100 d-inline-flex align-items-center py-3">
+                    <div class="btn-sm-square rounded-circle bg-primary me-2">
+                        <small class="far fa-clock text-white"></small>
+                    </div>
+                    <small>Mon - Fri : 9AM - 9PM</small>
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <!-- Topbar End -->
+
+
+
     <nav class="navbar navbar-expand-lg navbar-light bg-light px-3 sticky-top">
         <div class="container-fluid">
             <!-- Logo -->
@@ -91,7 +410,7 @@
                     </li>
 
                     <li class="nav-item">
-                        <a href="#" class="nav-link">Products</a>
+                        <a href="Products.html" class="nav-link">Products</a>
                     </li>
                     <li class="nav-item">
                         <a href="career.html" class="nav-link">Career</a>
@@ -105,159 +424,931 @@
             </div>
         </div>
     </nav>
-    <!-- Navbar End -->
 
 
-    <!-- Page Header Start -->
-    <!-- <div class="container-fluid page-header py-5 mb-5">
-        <div class="container py-5">
-            <h1 class="display-3 text-white mb-3 animated slideInDown">Our Team</h1>
-            <nav aria-label="breadcrumb animated slideInDown">
-                <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a class="text-white" href="#">Home</a></li>
-                    <li class="breadcrumb-item"><a class="text-white" href="#">Pages</a></li>
-                    <li class="breadcrumb-item text-white active" aria-current="page">Our Team</li>
-                </ol>
-            </nav>
+
+    <!-- Carousel Start -->
+    <div class="container-fluid p-0 pb-5">
+        <div class="owl-carousel header-carousel position-relative">
+            <div class="owl-carousel-item position-relative">
+                <img class="img-fluid animated blurToClear" src="img/carousel-1.jpg" alt="" id="img1">
+                <div class="carousel-inner">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-12 col-lg-8 text-center">
+                                <h1 class="display-3 text-white animated slideInDown mb-4">Innovating Surveillance
+                                    Technology</h1>
+                                <p class="fs-5 text-white mb-4 pb-2 animated slideInUp">Actoan Techlabs Pvt Ltd pioneers
+                                    cutting-edge CCTV solutions, integrating AI, IoT, and next-gen imaging to ensure
+                                    unparalleled security and smart surveillance.</p>
+                                <a href=""
+                                    class="btn btn-primary rounded-pill py-md-3 px-md-5 me-3 animated slideInLeft">Read
+                                    More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="owl-carousel-item position-relative">
+                <img class="img-fluid animated slideInRight" src="img/carousel-2.jpg" alt="" id="img2">
+                <div class="carousel-inner">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-12 col-lg-8 text-center">
+                                <h1 class="display-3 text-white animated slideInUp mb-4">Advanced R&D in CCTV
+                                    Technology</h1>
+                                <p class="fs-5 text-white mb-4 pb-2">From ultra-HD imaging to cybersecurity-enhanced
+                                    surveillance, our expert R&D team develops high-performance security solutions
+                                    tailored for tomorrow’s needs.</p>
+                                <a href=""
+                                    class="btn btn-primary rounded-pill py-md-3 px-md-5 me-3 animated slideInLeft">Read
+                                    More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="owl-carousel-item position-relative">
+                <img class="img-fluid animated slideInLeft" src="img/carousel-3.jpg" alt="" id="img3">
+                <div class="carousel-inner">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-12 col-lg-8 text-center">
+                                <h1 class="display-3 text-white animated slideInDown mb-4">Smart, Secure, Seamless</h1>
+                                <p class="fs-5 fw-medium text-white mb-4 pb-2">Experience seamless security with our
+                                    innovative CCTV cameras—AI-driven analytics, real-time monitoring, and robust
+                                    protection for homes and businesses.</p>
+                                <a href=""
+                                    class="btn btn-primary rounded-pill py-md-3 px-md-5 me-3 animated slideInLeft">Read
+                                    More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Carousel End -->
+
+
+ <!-- Services Section -->
+<div class="service-area">
+    <div class="container-fluid">
+        <div class="bg- rounded px-3 px-md-4 px-lg-5 py-5">
+            <div class="row text-center">
+                <div class="col-lg-12" style="margin-top:20px; margin-bottom:20px;">
+                    <div class="section-title wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="1s">
+                        <h1 class="display-5 mb-4">Our <span style="color: #023ba4;">Services</span></h1>
+                        <center>
+                            <div class="bg-primary mb-3" style="width: 60px; height: 2px;"></div>
+                        </center>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Responsive Service Cards -->
+            <div class="row text-center justify-content-center">
+                <div class="col-xl-2 col-lg-4 col-md-6 col-sm-12 mb-4 d-flex">
+                    <div class="service-single-box wow fadeInUp flex-grow-1 h-100" data-wow-delay="0.2s" data-wow-duration="1s">
+                        <div class="service-thumb">
+                            <img src="img/service15.jpg" alt="" class="img-fluid">
+                            <div class="service-icon">
+                                <img src="img/icon/ic1.png" alt="" class="icon-small">
+                            </div>
+                        </div>
+                        <div class="service-content">
+                            <h4 class="mt-3">AI-Powered Surveillance</h4>
+                            <p>Smart detection, facial recognition, and behavior analytics.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-2 col-lg-4 col-md-6 col-sm-12 mb-4 d-flex">
+                    <div class="service-single-box wow fadeInUp flex-grow-1 h-100" data-wow-delay="0.4s" data-wow-duration="1s">
+                        <div class="service-thumb">
+                            <img src="img/service3.jpg" alt="" class="img-fluid">
+                            <div class="service-icon">
+                                <img src="img/icon/ic2.png" alt="" class="icon-small">
+                            </div>
+                        </div>
+                        <div class="service-content">
+                            <h4 class="mt-3">Ultra-HD Imaging</h4>
+                            <p>Cutting-edge image processing for superior clarity.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-2 col-lg-4 col-md-6 col-sm-12 mb-4 d-flex">
+                    <div class="service-single-box wow fadeInUp flex-grow-1 h-100" data-wow-delay="0.6s" data-wow-duration="1s">
+                        <div class="service-thumb">
+                            <img src="img/service2.jpg" alt="" class="img-fluid">
+                            <div class="service-icon">
+                                <img src="img/icon/ic3.png" alt="" class="icon-small">
+                            </div>
+                        </div>
+                        <div class="service-content">
+                            <h4 class="mt-3">IoT-Integrated Security</h4>
+                            <p>Seamless connectivity <br>with smart devices.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-2 col-lg-4 col-md-6 col-sm-12 mb-4 d-flex">
+                    <div class="service-single-box wow fadeInUp flex-grow-1 h-100" data-wow-delay="0.8s" data-wow-duration="1s">
+                        <div class="service-thumb">
+                            <img src="img/service4.jpg" alt="" class="img-fluid">
+                            <div class="service-icon">
+                                <img src="img/icon/ic4.png" alt="" class="icon-small">
+                            </div>
+                        </div>
+                        <div class="service-content">
+                            <h4 class="mt-3">Custom R&D Solutions</h4>
+                            <p>Tailored research for specific security challenges.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-2 col-lg-4 col-md-6 col-sm-12 mb-4 d-flex">
+                    <div class="service-single-box wow fadeInUp flex-grow-1 h-100" data-wow-delay="1s" data-wow-duration="1s">
+                        <div class="service-thumb">
+                            <img src="img/service5.jpg" alt="" class="img-fluid">
+                            <div class="service-icon">
+                                <img src="img/icon/icon  5.png" alt="" class="icon-small">
+                            </div>
+                        </div>
+                        <div class="service-content">
+                            <h4 class="mt-3">Cybersecurity for CCTV</h4>
+                            <p>Protecting surveillance systems from cyber threats.</p>
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- End Row -->
+        </div>
+    </div>
+</div>
+
+
+
+    <!-- About Start -->
+    <div class="container-fluid" style="background-color: #ececec;">
+        <div class="container overflow-hidden my-5">
+            <div class="bg- rounded px-3 px-md-4 px-lg-5 py-5">
+                <div class="row g-5 align-items-center">
+                    <!-- Image Section -->
+                    <div class="col-lg-6 d-flex justify-content-center wow fadeInUp" data-wow-delay="0.5s">
+                        <div class="position-relative w-100" style="max-width: 400px; min-height: 280px;">
+                            <img class="img-fluid w-100 h-auto rounded mt-5" src="img/about2.png" style="object-fit: cover;"
+                                alt="About Us Image">
+                        </div>
+                    </div>
+
+                    <!-- Text Section -->
+                    <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
+                        <div class="p-3 p-md-4 p-lg-5">
+                            <h1 class="display-5 mb-4">About <span style="color: #023ba4;">Us</span></h1>
+                            <div class="bg-primary mb-3" style="width: 60px; height: 2px;"></div>
+                            <p class="mb-4 pb-2 text-muted">
+                                At <strong>Actoan Techlabs Pvt Ltd,</strong> we specialize in cutting-edge research and
+                                development in the CCTV camera industry.
+                                Our mission is to revolutionize surveillance technology with innovative,
+                                high-performance, and AI-driven security solutions.
+                                Whether you're looking for advanced imaging, real-time analytics, or next-generation
+                                security systems, we are at the forefront of innovation.
+                            </p>
+                            <p class="mb-4 pb-2 text-muted">
+                                We strongly believe in Inclusive Growth, Empowering the team, and providing an
+                                environment conducive to incubating new ideas,
+                                creating innovation, and excellence in technology solutions that enable customer
+                                success.
+                            </p>
+                            <a href="about.html" class="btn btn-primary rounded-pill py-3 px-5 mb-4">Know More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- About End -->
+
+
+
+
+    <!-- Service Start -->
+    <!-- <div class="container-xxl py-5">
+        <div class="container">
+            <div class="text-center">
+                <div class="bg-primary mb-3 mx-auto" style="width: 60px; height: 2px;"></div>
+                <h1 class="display-5 mb-5">Our Services</h1>
+            </div>
+            <div class="row g-0 service-row">
+                <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.1s">
+                    <div class="service-item border h-100 p-5">
+                        <div class="btn-square bg-light rounded-circle mb-4" style="width: 64px; height: 64px;">
+                            <img class="img-fluid" src="img/icon/icon-6.png" alt="Icon">
+                        </div>
+                        <h4 class="mb-3">Commercial CCTV System</h4>
+                        <p class="mb-4">Stet stet justo dolor sed duo. Ut clita sea sit ipsum diam lorem</p>
+                        <a class="btn" href=""><i class="fa fa-arrow-right text-white me-3"></i>Read More</a>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.3s">
+                    <div class="service-item border h-100 p-5">
+                        <div class="btn-square bg-light rounded-circle mb-4" style="width: 64px; height: 64px;">
+                            <img class="img-fluid" src="img/icon/icon-8.png" alt="Icon">
+                        </div>
+                        <h4 class="mb-3">Finger Print Access</h4>
+                        <p class="mb-4">Stet stet justo dolor sed duo. Ut clita sea sit ipsum diam lorem</p>
+                        <a class="btn" href=""><i class="fa fa-arrow-right text-white me-3"></i>Read More</a>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.5s">
+                    <div class="service-item border h-100 p-5">
+                        <div class="btn-square bg-light rounded-circle mb-4" style="width: 64px; height: 64px;">
+                            <img class="img-fluid" src="img/icon/icon-9.png" alt="Icon">
+                        </div>
+                        <h4 class="mb-3">Fire Detection And Safety</h4>
+                        <p class="mb-4">Stet stet justo dolor sed duo. Ut clita sea sit ipsum diam lorem</p>
+                        <a class="btn" href=""><i class="fa fa-arrow-right text-white me-3"></i>Read More</a>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.7s">
+                    <div class="service-item border h-100 p-5">
+                        <div class="btn-square bg-light rounded-circle mb-4" style="width: 64px; height: 64px;">
+                            <img class="img-fluid" src="img/icon/icon-3.png" alt="Icon">
+                        </div>
+                        <h4 class="mb-3">Smart Home Security</h4>
+                        <p class="mb-4">Stet stet justo dolor sed duo. Ut clita sea sit ipsum diam lorem</p>
+                        <a class="btn" href=""><i class="fa fa-arrow-right text-white me-3"></i>Read More</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </div> -->
-    <!-- Page Header End -->
+    <!-- Service End -->
+
+<!-- Feature Start -->
+<div class="container-fluid bg-light overflow-hidden my-5 px-0">
+    <div class="container-fluid feature px-0">
+        <div class="row g-0">
+            <!-- Left Side Content -->
+            <div class="col-lg-6 feature-text py-5 wow fadeIn d-flex align-items-center" data-wow-delay="0.5s"
+                style="background-image: url(img/aboutbackground.jpg); background-size: cover; background-position: center;">
+                <div class="p-4 p-lg-5 w-100">
+                    <h1 class="display-5 mb-3 text-white text-center text-lg-start">Why Choose Us</h1>
+                    <div class="bg-primary mb-4 mx-auto mx-lg-0" style="width: 60px; height: 2px;"></div>
+                    <div class="row row-cols-1 row-cols-md-2 g-4">
+                        <!-- Feature Items -->
+                        <div class="col">
+                            <div class="d-flex align-items-center">
+                                <div class="btn-square bg-white rounded-circle d-flex justify-content-center align-items-center"
+                                    style="width: 70px; height: 70px;">
+                                    <img class="img-fluid" src="img/icon/icon-7.png" alt="Icon" style="max-width: 50px;">
+                                </div>
+                                <div class="ms-3">
+                                    <h5 class="text-primary mb-2">Innovative Technology</h5>
+                                    <p class="mb-0 text-white" style="font-size: 0.9rem;">We push the boundaries of CCTV development.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="d-flex align-items-center">
+                                <div class="btn-square bg-white rounded-circle d-flex justify-content-center align-items-center"
+                                    style="width: 70px; height: 70px;">
+                                    <img class="img-fluid" src="img/icon/icon-8.png" alt="Icon" style="max-width: 50px;">
+                                </div>
+                                <div class="ms-3">
+                                    <h5 class="text-primary mb-2">Expert R&D Team</h5>
+                                    <p class="mb-0 text-white" style="font-size: 0.9rem;">Hardware, Software, and Mechanical Engineers.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="d-flex align-items-center">
+                                <div class="btn-square bg-white rounded-circle d-flex justify-content-center align-items-center"
+                                    style="width: 70px; height: 70px;">
+                                    <img class="img-fluid" src="img/icon/icon-9.png" alt="Icon" style="max-width: 50px;">
+                                </div>
+                                <div class="ms-3">
+                                    <h5 class="text-primary mb-2">Custom Solutions</h5>
+                                    <p class="mb-0 text-white" style="font-size: 0.9rem;">Tailored technology to meet security needs.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="d-flex align-items-center">
+                                <div class="btn-square bg-white rounded-circle d-flex justify-content-center align-items-center"
+                                    style="width: 70px; height: 70px;">
+                                    <img class="img-fluid" src="img/icon/icon-10.png" alt="Icon" style="max-width: 50px;">
+                                </div>
+                                <div class="ms-3">
+                                    <h5 class="text-primary mb-2">Industry Leadership</h5>
+                                    <p class="mb-0 text-white" style="font-size: 0.9rem;">Trusted by businesses and governments worldwide.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Right Side Image -->
+            <div class="col-lg-6 wow fadeIn p-0" style="min-height: 400px;" data-wow-delay="0.5s">
+                <div class="position-relative h-100">
+                    <img class="img-fluid w-100 h-100" src="img/feature.jpg" style="object-fit: cover;" alt="Feature Image">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Products Section -->
+
+<section
+  class="testimonials bg-light"
+  style="
+    padding: 50px 0;
+    height: 750px;
+    position: relative;
+    z-index: 50;
+  "
+>
+  <div class="container">
+    <div class="row">
+      <div class="text-center">
+        <h1
+          class="display-4 text-dark"
+          style="margin-bottom: 10px !important; text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.075);"
+        >
+          Products
+          <center>
+            <div class="bg-primary mb-3" style="width: 60px; height: 2px;"></div>
+        </center>
+        </h1>
+      </div>
+      <div class="col-sm-12">
+        <div
+          id="customers-testimonials"
+          class="owl-carousel"
+          style="
+            margin-top: 58px;
+            margin-right: -1px;
+            padding-bottom: 0;
+          "
+        >
+          <!-- TESTIMONIAL 1 -->
+          <div
+            class="item text-center testimonial-item"
+            style="margin-bottom: 20px"
+          >
+            <center>
+              <img
+                class="img-circle"
+                src="img/Cam-360.png"
+                alt="Cam-360"
+                style="
+                  display: flex;
+                  width: 220px;
+                  height: 220px;
+                  object-fit: cover;
+                  transform: translateZ(10px);
+                "
+              />
+            </center>
+            <p class="mt-3 text-dark">
+              Next-Gen Home Security Camera.
+            </p>
+            <div
+              class="testimonial-name mt-3 bg-white text-light font-weight-bold"
+              style="
+                margin: -17px auto 0;
+                display: table;
+                background: #0b52d8;
+                padding: 9px 35px;
+                border-radius: 20px;
+                text-align: center;
+                color: #fff;
+              "
+            >
+              Cam-360
+            </div>
+            <a
+            href="Cam-360- Description.html"
+            style="
+              display: block;
+              margin: 5px auto;
+              text-decoration: none;
+              color: blue;
+              font-size: 14px;
+              font-weight: normal;
+              text-align: center;
+              transition: transform 0.2s ease-in-out;
+            "
+            onmouseover="this.style.transform='scale(1.1)'"
+            onmouseout="this.style.transform='scale(1)'"
+          >
+          Product Info
+          </a>
+
+          </div>
+
+          <!-- TESTIMONIAL 2 -->
+          <div
+            class="item text-center testimonial-item"
+            style="margin-bottom: 20px"
+          >
+            <center>
+              <img
+                class="img-circle"
+                src="img/NON-PT 2K.png"
+                alt="NON-PT 2K"
+                style="
+                  display: flex;
+                  width: 220px;
+                  height: 220px;
+                  object-fit: cover;
+                  transform: translateZ(10px);
+                "
+              />
+            </center>
+            <p class="mt-3 text-dark">
+              High-quality fixed wireless CCTV camera
+            </p>
+            <div
+              class="testimonial-name mt-3 bg-white text-light font-weight-bold"
+              style="
+                margin: -17px auto 0;
+                display: table;
+                background: #0b52d8;
+                padding: 9px 35px;
+                border-radius: 20px;
+                text-align: center;
+                color: #fff;
+              "
+            >
+              NON-PT 2K
+            </div>
+            <a
+            href="Non-PT-2k.html"
+            style="
+              display: block;
+              margin: 5px auto;
+              text-decoration: none;
+              color: blue;
+              font-size: 14px;
+              font-weight: normal;
+              text-align: center;
+              transition: transform 0.2s ease-in-out;
+            "
+            onmouseover="this.style.transform='scale(1.1)'"
+            onmouseout="this.style.transform='scale(1)'"
+          >
+          Product Info
+          </a>
+
+          </div>
+
+          <!-- TESTIMONIAL 3 -->
+          <div
+            class="item text-center testimonial-item"
+            style="margin-bottom: 20px"
+          >
+            <center>
+              <img
+                class="img-circle"
+                src="img/non-pt cam eye.png"
+                alt="Non-PT Cam Eye"
+                style="
+                  display: flex;
+                  width: 220px;
+                  height: 220px;
+                  object-fit: cover;
+                  transform: translateZ(10px);
+                "
+              />
+            </center>
+            <p class="mt-3 text-dark">
+              Non-PT Cam - Wireless CCTV Security Camera for Home
+            </p>
+            <div
+              class="testimonial-name mt-3 bg-white text-light font-weight-bold"
+              style="
+                margin: -17px auto 0;
+                display: table;
+                background: #0b52d8;
+                padding: 9px 35px;
+                border-radius: 20px;
+                text-align: center;
+                color: #fff;
+              "
+            >
+              Non-PT Cam Eye
+            </div>
+                <a
+            href="non-ptcameye.html"
+            style="
+              display: block;
+              margin: 5px auto;
+              text-decoration: none;
+              color: blue;
+              font-size: 14px;
+              font-weight: normal;
+              text-align: center;
+              transition: transform 0.2s ease-in-out;
+            "
+            onmouseover="this.style.transform='scale(1.1)'"
+            onmouseout="this.style.transform='scale(1)'"
+          >
+          Product Info
+          </a>
+          </div>
+
+          <!-- TESTIMONIAL 4 -->
+          <div
+            class="item text-center testimonial-item"
+            style="margin-bottom: 20px"
+          >
+            <center>
+              <img
+                class="img-circle"
+                src="img/wireless 2k cam360.png"
+                alt="Wireless 2K Cam 360"
+                style="
+                  display: flex;
+                  width: 220px;
+                  height: 220px;
+                  object-fit: cover;
+                  transform: translateZ(10px);
+                "
+              />
+            </center>
+            <p class="mt-3 text-dark">
+              Wireless CCTV 360° PT Security Camera
+            </p>
+            <div
+              class="testimonial-name mt-3 bg-white text-light font-weight-bold"
+              style="
+                margin: -17px auto 0;
+                display: table;
+                background: #0b52d8;
+                padding: 9px 35px;
+                border-radius: 20px;
+                text-align: center;
+                color: #fff;
+              "
+            >
+              Wireless 2K Cam 360
+            </div>
+            <a
+            href="wireless-2k-cam360.html"
+            style="
+              display: block;
+              margin: 5px auto;
+              text-decoration: none;
+              color: blue;
+              font-size: 14px;
+              font-weight: normal;
+              text-align: center;
+              transition: transform 0.2s ease-in-out;
+            "
+            onmouseover="this.style.transform='scale(1.1)'"
+            onmouseout="this.style.transform='scale(1)'"
+          >
+          Product Info
+          </a>
+
+          </div>
+
+          <!-- TESTIMONIAL 5 -->
+          <div
+            class="item text-center testimonial-item"
+            style="margin-bottom: 20px"
+          >
+            <center>
+              <img
+                class="img-circle"
+                src="img/wireless cam 2k 3602.png"
+                alt="Wireless Cam 2K 360"
+                style="
+                  display: flex;
+                  width: 220px;
+                  height: 220px;
+                  object-fit: cover;
+                  transform: translateZ(10px);
+                "
+              />
+            </center>
+            <p class="mt-3 text-dark">
+              Wireless CCTV 360° PT Security Camera
+            </p>
+            <div
+              class="testimonial-name mt-3 bg-white text-light font-weight-bold"
+              style="
+                margin: -17px auto 0;
+                display: table;
+                background: #0b52d8;
+                padding: 9px 35px;
+                border-radius: 20px;
+                text-align: center;
+                color: #fff;
+              "
+            >
+              Wireless Cam 2K 360
+            </div>
+
+            <a
+            href="wireless-cam-2k-360.html"
+            style="
+              display: block;
+              margin: 5px auto;
+              text-decoration: none;
+              color: blue;
+              font-size: 14px;
+              font-weight: normal;
+              text-align: center;
+              transition: transform 0.2s ease-in-out;
+            "
+            onmouseover="this.style.transform='scale(1.1)'"
+            onmouseout="this.style.transform='scale(1)'"
+          >
+          Product Info
+          </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- 
+
+  
+    <div class="container-fluid bg-light overflow-hidden my-5 px-lg-0 wow fadeIn" data-wow-delay="0.5s">
+        <div class="container feature px-lg-0">
+            <div class="cameras">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-8">
+                            <div class="titlepage text_align_center">
+                                <h1 class="display-5 mb-2">Products</h1>
+                                <center>
+                                    <div class="bg-primary mb-2" style="width: 60px; height: 2px;"></div>
+                                </center>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-3 col-12 wow fadeInUp" data-wow-delay="0.5s">
+                            <div class="cameras_text">
+                                <div class="cameras_img text_align_center">
+                                    <figure><img src="img/Cam-360.png" alt="#" /></figure>
+                                </div>
+                                <h4>Cam-360</h4>
+                                <p>Next-Gen Home <br>Security Camera</p>
+                                <a class="read_more" href="cameras.html">Know More</a>
+                            </div>
+                        </div>
+
+                        <div class="col-md-3 col-12 wow fadeInUp" data-wow-delay="0.5s">
+                            <div class="cameras_text">
+                                <div class="cameras_img text_align_center">
+                                    <figure><img src="img/NON-PT 2K.png" alt="#" /></figure>
+                                </div>
+                                <h4>NON-PT 2K</h4>
+                                <p>High-quality fixed wireless <br>CCTV camera</p>
+                                <a class="read_more" href="cameras.html">Know More</a>
+                            </div>
+                        </div>
+
+                        <div class="col-md-3 col-12 wow fadeInUp" data-wow-delay="0.5s">
+                            <div class="cameras_text">
+                                <div class="cameras_img text_align_center">
+                                    <figure><img src="img/non-pt cam eye.png" alt="#" /></figure>
+                                </div>
+                                <h4>Non-PT Cam Eye</h4>
+                                <p>Non-PT Cam - Wireless CCTV <br>Security Camera for Home</p>
+                                <a class="read_more" href="cameras.html">Know More</a>
+                            </div>
+                        </div>
+
+                        <div class="col-md-3 col-12 wow fadeInUp" data-wow-delay="0.6s">
+                            <div class="cameras_text">
+                                <div class="cameras_img text_align_center">
+                                    <figure><img src="img/wireless 2k cam360.png" alt="#" /></figure>
+                                </div>
+                                <h4>Wireless 2K Cam 360</h4>
+                                <p>Wireless CCTV 360° <br>PT Security Camera</p>
+                                <a class="read_more" href="cameras.html">Know More</a>
+                            </div>
+                        </div>
+
+                        <div class="col-md-3 col-12 wow fadeInUp" data-wow-delay="0.6s">
+                            <div class="cameras_text">
+                                <div class="cameras_img text_align_center">
+                                    <figure><img src="img/wireless cam 2k 3602.png" alt="#" /></figure>
+                                </div>
+                                <h4>Wireless Cam 2K 360</h4>
+                                <p>Wireless CCTV 360° <br>PT Security Camera</p>
+                                <a class="read_more" href="cameras.html">Know More</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-12">
+                        <div class="see_camera"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+
+    <!-- Projects Start -->
+
+    <!-- Projects End -->
+
+
+    <!-- Quote Start -->
+
+    <!-- Quote End -->
 
 
     <!-- Team Start -->
-    <div class="container-xxl py-5 mt-5 mb-5">
-        <div class="container-fluid" style="margin-bottom: 90px;">
+    <!-- <div class="container-xxl py-5">
+        <div class="container">
             <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
                 <div class="bg-primary mb-3 mx-auto" style="width: 60px; height: 2px;"></div>
-                <h1 class="display-5 mb-5">Products</h1>
+                <h1 class="display-5 mb-5">Team Members</h1>
             </div>
-            <div class="row justify-content-center g-4">
-                <div class="col-lg-3 col-md-6 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="team-item">
-                        <div class="d-flex justify-content-center overflow-hidden position-relative">
-                            <img class="img-fluid mt-3" src="img/Cam-360.png" alt="Cam-360">
+                        <div class="overflow-hidden position-relative">
+                            <img class="img-fluid" src="img/team-1.jpg" alt="">
+                            <div class="team-social">
+                                <a class="btn btn-square btn-dark rounded-circle m-1" href=""><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-square btn-dark rounded-circle m-1" href=""><i class="fab fa-twitter"></i></a>
+                                <a class="btn btn-square btn-dark rounded-circle m-1" href=""><i class="fab fa-instagram"></i></a>
+                            </div>
                         </div>
                         <div class="text-center p-4">
-                            <h4 class="mb-0" style="color: #0741ad;">Cam-360</h4>
-                            <p class="mt-3 text-dark">Next-Gen Home <br> Camera</p>
-                            <a class="btn btn-dark m-1" href="Cam-360- Description.html">Know More</a>
+                            <h5 class="mb-0">Full Name</h5>
+                            <span class="text-primary">Designation</span>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
                     <div class="team-item">
-                        <div class="d-flex justify-content-center overflow-hidden position-relative">
-                            <img class="img-fluid mt-3" src="img/NON-PT 2K.png" alt="NON-PT 2K">
+                        <div class="overflow-hidden position-relative">
+                            <img class="img-fluid" src="img/team-2.jpg" alt="">
+                            <div class="team-social">
+                                <a class="btn btn-square btn-dark rounded-circle m-1" href=""><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-square btn-dark rounded-circle m-1" href=""><i class="fab fa-twitter"></i></a>
+                                <a class="btn btn-square btn-dark rounded-circle m-1" href=""><i class="fab fa-instagram"></i></a>
+                            </div>
                         </div>
                         <div class="text-center p-4">
-                            <h4 class="mb-0" style="color: #0741ad;">NON-PT 2K</h4>
-                            <p class="mt-3 text-dark">High-quality fixed wireless CCTV camera</p>
-                            <a class="btn btn-dark m-1" href="Non-PT-2k.html">Know More</a>
+                            <h5 class="mb-0">Full Name</h5>
+                            <span class="text-primary">Designation</span>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
                     <div class="team-item">
-                        <div class="d-flex justify-content-center overflow-hidden position-relative">
-                            <img class="img-fluid mt-3" src="img/non-pt cam eye.png" alt="Non-PT Cam Eye">
+                        <div class="overflow-hidden position-relative">
+                            <img class="img-fluid" src="img/team-3.jpg" alt="">
+                            <div class="team-social">
+                                <a class="btn btn-square btn-dark rounded-circle m-1" href=""><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-square btn-dark rounded-circle m-1" href=""><i class="fab fa-twitter"></i></a>
+                                <a class="btn btn-square btn-dark rounded-circle m-1" href=""><i class="fab fa-instagram"></i></a>
+                            </div>
                         </div>
                         <div class="text-center p-4">
-                            <h4 class="mb-0" style="color: #0741ad;">Non-PT Cam Eye</h4>
-                            <p class="mt-3 text-dark">Non-PT Cam - Wireless CCTV Security Camera for Home</p>
-                            <a class="btn btn-dark m-1" href="non-ptcameye.html">Know More</a>
+                            <h5 class="mb-0">Full Name</h5>
+                            <span class="text-primary">Designation</span>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
                     <div class="team-item">
-                        <div class="d-flex justify-content-center overflow-hidden position-relative">
-                            <img class="img-fluid mt-3" src="img/wireless 2k cam360.png" alt="Wireless 2K Cam 360">
+                        <div class="overflow-hidden position-relative">
+                            <img class="img-fluid" src="img/team-4.jpg" alt="">
+                            <div class="team-social">
+                                <a class="btn btn-square btn-dark rounded-circle m-1" href=""><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-square btn-dark rounded-circle m-1" href=""><i class="fab fa-twitter"></i></a>
+                                <a class="btn btn-square btn-dark rounded-circle m-1" href=""><i class="fab fa-instagram"></i></a>
+                            </div>
                         </div>
                         <div class="text-center p-4">
-                            <h4 class="mb-0" style="color: #0741ad;">Wireless 2K Cam 360</h4>
-                            <p class="mt-3 text-dark">Wireless CCTV 360° PT Security Camera</p>
-                            <a class="btn btn-dark m-1" href="wireless-2k-cam360.html">Know More</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="team-item">
-                        <div class="d-flex justify-content-center overflow-hidden position-relative">
-                            <img class="img-fluid mt-3" src="img/wireless cam 2k 3602.png" alt="Wireless Cam 2K 360">
-                        </div>
-                        <div class="text-center p-4">
-                            <h4 class="mb-0" style="color: #0741ad;">Wireless Cam 2K 360</h4>
-                            <p class="mt-3 text-dark">Wireless CCTV 360° PT Security Camera</p>
-                            <a class="btn btn-dark m-1" href="wireless-cam-2k-360.html">Know More</a>
+                            <h5 class="mb-0">Full Name</h5>
+                            <span class="text-primary">Designation</span>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    
-    
+    </div> -->
     <!-- Team End -->
-        
 
-    <!-- Footer Start -->
-    <div class="container-fluid footer py-5 wow fadeIn mt-5 pb-4" data-wow-delay="0.1s" style="background-color: #042c77; color: white;">
-        <div class="container py-5">
-            <div class="row g-5">
-                <div class="col-lg-4 col-md-6">
-                     <!-- Logo -->
-                     <div class="mb-4">
-                        <img src="img/actoan logo.png" alt="Company Logo" style="max-width: 72px; height: auto;">
-                    </div>
-                    <h5 class="mb-4" style="color: white; font-size: 18px; margin-top: 20px;">Address</h5>
-                    <p class="mb-2" style="font-size: 14px;"><i class="fa fa-map-marker-alt me-3"></i>Wave One, Gold Office, G1-25/11, 25th Floor, Sector -18, Noida, Uttar Pradesh-201301, India</p>
-                    <p class="mb-2" style="font-size: 14px;"><i class="fa fa-envelope me-3"></i>info@actoan.in</p>
-                   
+
+    <!-- Testimonial Start -->
+    <!-- <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="container">
+            <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                <div class="bg-primary mb-3 mx-auto" style="width: 60px; height: 2px;"></div>
+                <h1 class="display-5 mb-5">Testimonial</h1>
+            </div>
+            <div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.1s">
+                <div class="testimonial-item text-center" data-dot="<img class='img-fluid' src='img/testimonial-1.jpg' alt=''>">
+                    <p class="fs-5">Clita clita tempor justo dolor ipsum amet kasd amet duo justo duo duo labore sed sed. Magna ut diam sit et amet stet eos sed clita erat magna elitr erat sit sit erat at rebum justo sea clita.</p>
+                    <h4>Client Name</h4>
+                    <span class="text-primary">Profession</span>
                 </div>
-                <div class="col-lg-4 col-md-6">
-                    <h5 class="mb-4" style="color: white; font-size: 18px; margin-top: 20px;">Services</h5>
-                    <a class="btn btn-link" href="#" style="color: white; text-decoration: none; font-size: 14px;">AI-Powered Surveillance</a><br>
-                    <a class="btn btn-link" href="#" style="color: white; text-decoration: none; font-size: 14px;">Ultra-HD Imaging</a><br>
-                    <a class="btn btn-link" href="#" style="color: white; text-decoration: none; font-size: 14px;">IoT-Integrated Security</a><br>
-                    <a class="btn btn-link" href="#" style="color: white; text-decoration: none; font-size: 14px;">Custom R&D Solutions</a><br>
-                    <a class="btn btn-link" href="#" style="color: white; text-decoration: none; font-size: 14px;">Cybersecurity for CCTV</a>
+                <div class="testimonial-item text-center" data-dot="<img class='img-fluid' src='img/testimonial-2.jpg' alt=''>">
+                    <p class="fs-5">Clita clita tempor justo dolor ipsum amet kasd amet duo justo duo duo labore sed sed. Magna ut diam sit et amet stet eos sed clita erat magna elitr erat sit sit erat at rebum justo sea clita.</p>
+                    <h4>Client Name</h4>
+                    <span class="text-primary">Profession</span>
                 </div>
-                <div class="col-lg-4 col-md-6">
-                    <h5 class="mb-4" style="color: white; font-size: 18px; margin-top: 20px;">Quick Links</h5>
-                    <a class="btn btn-link" href="about.html" style="color: white; text-decoration: none; font-size: 14px;">About Us</a><br>
-                    <a class="btn btn-link" href="contact.html" style="color: white; text-decoration: none; font-size: 14px;">Contact Us</a><br>
-                    <a class="btn btn-link" href="career.html" style="color: white; text-decoration: none; font-size: 14px;">Career</a><br>
-                    <a class="btn btn-link" href="#" style="color: white; text-decoration: none; font-size: 14px;">Products</a>
+                <div class="testimonial-item text-center" data-dot="<img class='img-fluid' src='img/testimonial-3.jpg' alt=''>">
+                    <p class="fs-5">Clita clita tempor justo dolor ipsum amet kasd amet duo justo duo duo labore sed sed. Magna ut diam sit et amet stet eos sed clita erat magna elitr erat sit sit erat at rebum justo sea clita.</p>
+                    <h4>Client Name</h4>
+                    <span class="text-primary">Profession</span>
                 </div>
+            </div>
+        </div>
+    </div> -->
+    <!-- Testimonial End -->
+
+<!-- Footer Start -->
+<div class="container-fluid footer py-5 wow fadeIn mt-5 pb-4" data-wow-delay="0.1s" style="background-color: #042c77; color: white;">
+    <div class="container py-5">
+        <div class="row g-5">
+            <div class="col-lg-4 col-md-6">
+                 <!-- Logo -->
+                 <div class="mb-4">
+                    <img src="img/actoan logo.png" alt="Company Logo" style="max-width: 72px; height: auto;">
+                </div>
+                <h5 class="mb-4" style="color: white; font-size: 18px; margin-top: 20px;">Address</h5>
+                <p class="mb-2" style="font-size: 14px;"><i class="fa fa-map-marker-alt me-3"></i>Wave One, Gold Office, G1-25/11, 25th Floor, Sector -18, Noida, Uttar Pradesh-201301, India</p>
+                <p class="mb-2" style="font-size: 14px;"><i class="fa fa-envelope me-3"></i>info@actoan.in</p>
+               
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <h5 class="mb-4" style="color: white; font-size: 18px; margin-top: 20px;">Services</h5>
+                <a class="btn btn-link" href="#" style="color: white; text-decoration: none; font-size: 14px;">AI-Powered Surveillance</a><br>
+                <a class="btn btn-link" href="#" style="color: white; text-decoration: none; font-size: 14px;">Ultra-HD Imaging</a><br>
+                <a class="btn btn-link" href="#" style="color: white; text-decoration: none; font-size: 14px;">IoT-Integrated Security</a><br>
+                <a class="btn btn-link" href="#" style="color: white; text-decoration: none; font-size: 14px;">Custom R&D Solutions</a><br>
+                <a class="btn btn-link" href="#" style="color: white; text-decoration: none; font-size: 14px;">Cybersecurity for CCTV</a>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <h5 class="mb-4" style="color: white; font-size: 18px; margin-top: 20px;">Quick Links</h5>
+                <a class="btn btn-link" href="about.html" style="color: white; text-decoration: none; font-size: 14px;">About Us</a><br>
+                <a class="btn btn-link" href="contact.html" style="color: white; text-decoration: none; font-size: 14px;">Contact Us</a><br>
+                <a class="btn btn-link" href="career.html" style="color: white; text-decoration: none; font-size: 14px;">Career</a><br>
+                <a class="btn btn-link" href="Products.html" style="color: white; text-decoration: none; font-size: 14px;">Products</a>
             </div>
         </div>
     </div>
-    <!-- Footer End -->
-    
-    
-    
-        <!-- Copyright Start -->
-        <div class="container-fluid py-4" style="background: #000000;">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                            <center>
-                            &copy; <a class="border-bottom" href="index.html">Actoan</a>, All Right Reserved.
-                        </center>
-                        </div>
-    
-                </div>
+</div>
+<!-- Footer End -->
+
+
+
+    <!-- Copyright Start -->
+    <div class="container-fluid py-4" style="background: #000000;">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                        <center>
+                        &copy; <a class="border-bottom" href="index.html">Actoan</a>, All Right Reserved.
+                    </center>
+                    </div>
+
             </div>
         </div>
+    </div>
     <!-- Copyright End -->
 
 
     <!-- Back to Top -->
-    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i class="bi bi-arrow-up"></i></a>
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i
+            class="bi bi-arrow-up"></i></a>
+
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+        
+
+
+
+        
+    <!-- JavaScript Libraries -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
 
 
     <!-- JavaScript Libraries -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="lib/wow/wow.min.js"></script>
     <script src="lib/easing/easing.min.js"></script>
@@ -269,6 +1360,14 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+
+   
+    <script
+    src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"
+  ></script>
+
 </body>
 
 </html>
