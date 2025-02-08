@@ -1,6 +1,6 @@
 /********** Template CSS **********/
 :root {
-    --primary: #65B530;
+    --primary: #0741ad;
     --secondary: #9B9B9B;
     --light: #F5F5F5;
     --dark: #161616;
@@ -265,17 +265,32 @@
 
 
 .page-headers {
+    min-height: 340px; /* Default height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
     background: linear-gradient(rgba(22, 22, 22, .7), rgba(22, 22, 22, .7)), url(../img/aboutus.jpg) center center no-repeat;
     background-size: cover;
 }
 
 .page-headerss {
+    min-height: 340px; /* Default height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
     background: linear-gradient(rgba(22, 22, 22, .7), rgba(22, 22, 22, .7)), url(../img/contact..jpg) center center no-repeat;
     background-size: cover;
 }
 
 
 .page-headerr {
+    min-height: 340px; /* Default height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
     background: linear-gradient(rgba(22, 22, 22, .7), rgba(22, 22, 22, .7)), url(../img/Career.jpg) center center no-repeat;
     background-size: cover;
 }
@@ -899,3 +914,79 @@
     background: #0b52d8; /* Active dot color */
   }
   
+
+  .custom-nav {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+  }
+  .custom-nav button {
+    background: none;
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+    color: #0b52d8;
+    font-weight: bold;
+  }
+  .prev-arrow {
+    position: absolute;
+    left: -40px;
+  }
+  .next-arrow {
+    position: absolute;
+    right: -40px;
+  }
+
+
+  /* Adjust text alignment for smaller screens */
+  @media (max-width: 768px) {
+    #aboutline{align-items: center;}
+    .text-md-start { text-align: center !important; }
+}
+
+/* Ensure image resizes properly */
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Box shadow for the image */
+.shadow-lg {
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 10px 20px, 
+                rgba(0, 0, 0, 0.12) 0px -5px 10px, 
+                rgba(0, 0, 0, 0.12) 0px 2px 4px, 
+                rgba(0, 0, 0, 0.17) 0px 5px 7px, 
+                rgba(0, 0, 0, 0.09) 0px -1px 3px;
+}
+
+@media (max-width: 768px) {
+    #aboutline {
+      margin: 0 auto; /* Centers the line */
+      display: block;
+    }
+  }
+
+
+  @keyframes pulse {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 5px rgba(0, 123, 255, 0.712);
+    }
+    50% {
+        transform: scale(1.1);
+        box-shadow: 0 0 15px rgba(0, 123, 255, 0.8);
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    }
+}
+
+.pulsing-btn {
+    animation: pulse 1.5s infinite ease-in-out;
+}
+
+
