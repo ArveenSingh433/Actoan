@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Cam-360- Description</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="img/actoan logo.png" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&family=Roboto:wght@500;700;900&display=swap" rel="stylesheet"> 
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<style>
+  .card-wrapper{
+    max-width: 1400px;
+    margin: 0 auto;
+   
+}
+img{
+    width: 100%;
+    display: block;
+}
+.img-display{
+    overflow: hidden;
+}
+.img-showcase{
+    display: flex;
+    width: 100%;
+    transition: all 0.5s ease;
+}
+.img-showcase img{
+    min-width: 100%;
+}
+.img-select{
+    display: flex;
+}
+.img-item{
+    margin: 0.3rem;
+}
+.img-item:nth-child(1),
+.img-item:nth-child(2),
+.img-item:nth-child(3){
+    margin-right: 0;
+}
+.img-item:hover{
+    opacity: 0.8;
+}
+.product-content{
+    padding: 2rem 1rem;
+}
+.product-title{
+    font-size: 3rem;
+    text-transform: capitalize;
+    font-weight: 700;
+    position: relative;
+    color: #12263a;
+    margin: 1rem 0;
+}
+.product-title::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 4px;
+    width: 80px;
+    background: #12263a;
+}
+.product-link{
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 0.9rem;
+    display: inline-block;
+    margin-bottom: 0.5rem;
+    background: #256eff;
+    color: #fff;
+    padding: 0 0.3rem;
+    transition: all 0.5s ease;
+}
+.product-link:hover{
+    opacity: 0.9;
+}
+.product-rating{
+    color: #ffc107;
+}
+.product-rating span{
+    font-weight: 600;
+    color: #252525;
+}
+.product-price{
+    margin: 1rem 0;
+    font-size: 1rem;
+    font-weight: 700;
+}
+.product-price span{
+    font-weight: 400;
+}
+.last-price span{
+    color: #f64749;
+    text-decoration: line-through;
+}
+.new-price span{
+    color: #256eff;
+}
+.product-detail h2{
+    text-transform: capitalize;
+    color: #12263a;
+    padding-bottom: 0.6rem;
+}
+.product-detail p{
+    font-size: 0.9rem;
+    padding: 0.3rem;
+    opacity: 0.8;
+}
+.product-detail ul{
+    margin: 1rem 0;
+    font-size: 0.9rem;
+}
+.product-detail ul li{
+    margin: 0;
+    list-style: none;
+    background: url(https://fadzrinmadu.github.io/hosted-assets/product-detail-page-design-with-image-slider-html-css-and-javascript/checked.png) left center no-repeat;
+    background-size: 18px;
+    padding-left: 1.7rem;
+    margin: 0.4rem 0;
+    font-weight: 600;
+    opacity: 0.9;
+}
+.product-detail ul li span{
+    font-weight: 400;
+}
+.purchase-info{
+    margin: 1.5rem 0;
+}
+.purchase-info input,
+.purchase-info .btn{
+    border: 1.5px solid #ddd;
+    border-radius: 25px;
+    text-align: center;
+    padding: 0.45rem 0.8rem;
+    outline: 0;
+    margin-right: 0.2rem;
+    margin-bottom: 1rem;
+}
+.purchase-info input{
+    width: 60px;
+}
+.purchase-info .btn{
+    cursor: pointer;
+    color: #fff;
+}
+.purchase-info .btn:first-of-type{
+    background: #256eff;
+}
+.purchase-info .btn:last-of-type{
+    background: #f64749;
+}
+.purchase-info .btn:hover{
+    opacity: 0.9;
+}
+.social-links{
+    display: flex;
+    align-items: center;
+}
+.social-links a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    color: #000;
+    border: 1px solid #000;
+    margin: 0 0.2rem;
+    border-radius: 50%;
+    text-decoration: none;
+    font-size: 0.8rem;
+    transition: all 0.5s ease;
+}
+.social-links a:hover{
+    background: #000;
+    border-color: transparent;
+    color: #fff;
+}
+
+@media screen and (min-width: 992px){
+    .card{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 1.5rem;
+    }
+    .card-wrapper{
+        /* height: 100vh; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .product-imgs{
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+    }
+    .product-content{
+        padding-top: 20;
+    }
+}
+
+
+.img-select {
+  
+    padding: 10px; /* Adds some spacing inside the container */
+    border-radius: 8px; /* Rounded corners */
+    display: flex; /* Aligns items horizontally */
+    gap: 10px; /* Adds space between items */
+    justify-content: center; /* Centers items horizontally */
+}
+
+.img-item {
+    background-color: #e6e6e6; /* Slightly darker gray for individual items */
+    padding: 10px; /* Adds padding inside each item */
+    border-radius: 8px; /* Rounded corners for individual items */
+   
+}
+
+.img-item img {
+    display: block; /* Ensures images are treated as block elements */
+    max-width: 100%; /* Ensures images scale properly */
+    border-radius: 4px; /* Adds slight rounding to the image edges */
+}
+</style>
+<body>
+    <!-- Spinner Start -->
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <!-- Spinner End -->
+
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light px-3 sticky-top">
+        <div class="container-fluid">
+            <!-- Logo -->
+            <a class="navbar-brand" href="index.html">
+                <img src="img/actoan logo.png" alt="Actoan Logo" class="img-fluid" style="max-height: 75px;">
+            </a>
+
+            <!-- Toggler Button -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+                aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Navbar Links -->
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav ms-auto align-items-lg-center">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link active">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="about.html" class="nav-link">About Us</a>
+                    </li>
+
+                    <!-- Domain Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Domain</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#" class="dropdown-item">Pending</a></li>
+                            <li><a href="#" class="dropdown-item">Pending</a></li>
+                            <li><a href="#" class="dropdown-item">Pending</a></li>
+                            <li><a href="#" class="dropdown-item">Pending</a></li>
+                            <li><a href="#" class="dropdown-item">Pending</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- Services Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Services</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#" class="dropdown-item">Pending</a></li>
+                            <li><a href="#" class="dropdown-item">Pending</a></li>
+                            <li><a href="#" class="dropdown-item">Pending</a></li>
+                            <li><a href="#" class="dropdown-item">Pending</a></li>
+                            <li><a href="404.html" class="dropdown-item">Pending</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="career.html" class="nav-link">Career</a>
+                    </li>
+
+                    <!-- Contact Button -->
+                    <li class="nav-item">
+                        <a href="contact.html" class="btn btn-primary ms-2 pulsing-btn">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Navbar End -->
+
+
+    <!-- Page Header Start -->
+    <div class="container-fluid page-header py-5 mb-5 " style="padding-top: 40px; padding-bottom: 40px;">
+        <div class="container py-5 ">
+            <h1 class="display-3 text-white mb-3 animated slideInDown">Product 03</h1>
+            <nav aria-label="breadcrumb animated slideInDown">
+                <ol class="breadcrumb">
+                
+             
+                </ol>
+            </nav>
+        </div>
+    </div>
+    <!-- Page Header End -->
+
+<!-- Projects Start -->
+<div class="container-fluid py-4 wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="1s">
+    <div class="card-wrapper">
+        <div class="card">
+            <!-- card left -->
+            <div class="product-imgs">
+                <div class="img-display">
+                    <div class="img-showcase">
+                        <img src="img/non-pt cam eye.png" alt="camera image">
+                        <img src="img/non-pt cam eye.png" alt="camera image">
+                    </div>
+                </div>
+                <div class="img-select">
+                    <div class="img-item">
+                        <a href="#" data-id="1">
+                            <img src="img/non-pt cam eye.png" alt="camera image">
+                        </a>
+                    </div>
+                    <div class="img-item">
+                        <a href="#" data-id="2">
+                            <img src="img/non-pt cam eye.png" alt="camera image">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- card right -->
+            <div class="product-content">
+                <div class="additional-content">
+                    <h3 style="color: #042c77;">Non-Pt Cam: Wireless CCTV Security Camera for Home</h3>
+                    <p>The security of your loved ones and your home matters like nothing else. To ensure complete safety, bring home our new age AI-based Smart Home Camera that offers enhanced security with round-the-clock recording and state-of-the-art features.</p>
+
+                    <h4>Key Features</h4>
+                    <ul>
+                        <li><b>Camera Clarity:</b> 2MP (1080P) Resolution ensures incredibly clear video recording with live video and playback.</li>
+                        <li><b>Full Offline Recording:</b> Continuous recording even if Wi-Fi disconnects or during power fluctuations. Automatically restarts seamlessly.</li>
+                        <li><b>Live Video Streaming:</b> Excellent quality live video streaming for real-time monitoring.</li>
+                        <li><b>Two-Way Calling:</b> Effortless communication with your family at home at the touch of a button.</li>
+                        <li><b>True Cloud Camera:</b> Event-based cloud recording for efficient data storage.</li>
+                        <li><b>Night Vision:</b> Clear visibility even during nighttime with six invisible infrared LEDs.</li>
+                        <li><b>AI Motion Detection:</b> Real-time alerts on your phone when motion is detected within the activity zone.</li>
+                        <li><b>106° FOV:</b> Wide field of view to cover maximum area in your house or shop.</li>
+                        <li><b>Continuous Recording (24x7):</b> Non-stop video recording on a microSD card (up to 128 GB), offering up to 60 days of footage in low quality.</li>
+                        <li><b>Multiple Mounting Options:</b> Mount it on a tabletop or wall for your convenience.</li>
+                    </ul>
+
+                    <h4>Technical Details & Specifications</h4>
+                    <table style="border-collapse: separate; border-spacing: 0 5px; width: 100%; text-align: left;">
+                        <tr>
+                            <td style="padding: 5px;">Camera</td>
+                            <td style="padding: 5px;">2 MP</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 5px;">Video Quality</td>
+                            <td style="padding: 5px;">FHD (1080p)</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 5px;">Video Encoding</td>
+                            <td style="padding: 5px;">H.264</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 5px;">microSD Card</td>
+                            <td style="padding: 5px;">Up to 128 GB</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 5px;">Night Vision</td>
+                            <td style="padding: 5px;">Up to 9 meters</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 5px;">Infrared LEDs</td>
+                            <td style="padding: 5px;">6</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 5px;">Field of View</td>
+                            <td style="padding: 5px;">106°</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 5px;">Wireless Security Encryption</td>
+                            <td style="padding: 5px;">WPA/WPA 2</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 5px;">Connectivity</td>
+                            <td style="padding: 5px;">Wi-Fi 2.4 GHz</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 5px;">Power Input</td>
+                            <td style="padding: 5px;">5 V - 1 A</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 5px;">Weight</td>
+                            <td style="padding: 5px;">218 g</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Projects End -->
+
+        
+
+    <!-- Footer Start -->
+    <div class="container-fluid footer py-5 wow fadeIn mt-5 pb-4" data-wow-delay="0.1s" style="background-color: #042c77; color: white;">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-lg-4 col-md-6">
+                     <!-- Logo -->
+                     <div class="mb-4">
+                        <img src="img/actoan logo.png" alt="Company Logo" style="max-width: 72px; height: auto;">
+                    </div>
+                    <h5 class="mb-4" style="color: white; font-size: 18px; margin-top: 20px;">Address</h5>
+                    <p class="mb-2" style="font-size: 14px;"><i class="fa fa-map-marker-alt me-3"></i>Wave One, Gold Office, G1-25/11, 25th Floor, Sector -18, Noida, Uttar Pradesh-201301, India</p>
+                    <p class="mb-2" style="font-size: 14px;"><i class="fa fa-envelope me-3"></i>info@actoan.in</p>
+                   
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <h5 class="mb-4" style="color: white; font-size: 18px; margin-top: 20px;">Services</h5>
+                    <a class="btn btn-link" href="#" style="color: white; text-decoration: none; font-size: 14px;">AI-Powered Surveillance</a><br>
+                    <a class="btn btn-link" href="#" style="color: white; text-decoration: none; font-size: 14px;">Ultra-HD Imaging</a><br>
+                    <a class="btn btn-link" href="#" style="color: white; text-decoration: none; font-size: 14px;">IoT-Integrated Security</a><br>
+                    <a class="btn btn-link" href="#" style="color: white; text-decoration: none; font-size: 14px;">Custom R&D Solutions</a><br>
+                    <a class="btn btn-link" href="#" style="color: white; text-decoration: none; font-size: 14px;">Cybersecurity for CCTV</a>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <h5 class="mb-4" style="color: white; font-size: 18px; margin-top: 20px;">Quick Links</h5>
+                    <a class="btn btn-link" href="about.html" style="color: white; text-decoration: none; font-size: 14px;">About Us</a><br>
+                    <a class="btn btn-link" href="contact.html" style="color: white; text-decoration: none; font-size: 14px;">Contact Us</a><br>
+                    <a class="btn btn-link" href="career.html" style="color: white; text-decoration: none; font-size: 14px;">Career</a><br>
+                    <a class="btn btn-link" href="#" style="color: white; text-decoration: none; font-size: 14px;">Products</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+    
+    
+    
+        <!-- Copyright Start -->
+        <div class="container-fluid py-4" style="background: #000000;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                            <center>
+                            &copy; <a class="border-bottom" href="index.html">Actoan</a>, All Right Reserved.
+                        </center>
+                        </div>
+    
+                </div>
+            </div>
+        </div>
+    <!-- Copyright End -->
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/isotope/isotope.pkgd.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+    <script>
+        const products = [
+            {
+                id: 1,
+                title: "Product 1",
+                image: "https://via.placeholder.com/150",
+                description: "This is the full description of Product 1. It has many features and details."
+            },
+            {
+                id: 2,
+                title: "Product 2",
+                image: "https://via.placeholder.com/150",
+                description: "This is the full description of Product 2. It has many features and details."
+            },
+            {
+                id: 3,
+                title: "Product 3",
+                image: "https://via.placeholder.com/150",
+                description: "This is the full description of Product 3. It has many features and details."
+            },
+            {
+                id: 4,
+                title: "Product 4",
+                image: "https://via.placeholder.com/150",
+                description: "This is the full description of Product 4. It has many features and details."
+            },
+            {
+                id: 5,
+                title: "Product 5",
+                image: "https://via.placeholder.com/150",
+                description: "This is the full description of Product 5. It has many features and details."
+            }
+        ];
+    
+        function showProduct(id) {
+            const product = products.find(p => p.id === id);
+            if (product) {
+                document.getElementById('productTitle').textContent = product.title;
+                document.getElementById('productImage').src = product.image;
+                document.getElementById('productDescription').textContent = product.description;
+                const modal = new bootstrap.Modal(document.getElementById('productModal'));
+                modal.show();
+            }
+        }
+    </script>
+    <script>
+        const imgs = document.querySelectorAll('.img-select a');
+const imgBtns = [...imgs];
+let imgId = 1;
+
+imgBtns.forEach((imgItem) => {
+    imgItem.addEventListener('click', (event) => {
+        event.preventDefault();
+        imgId = imgItem.dataset.id;
+        slideImage();
+    });
+});
+
+function slideImage(){
+    const displayWidth = document.querySelector('.img-showcase img:first-child').clientWidth;
+
+    document.querySelector('.img-showcase').style.transform = `translateX(${- (imgId - 1) * displayWidth}px)`;
+}
+
+window.addEventListener('resize', slideImage);
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
