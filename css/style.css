@@ -295,6 +295,19 @@
     background-size: cover;
 }
 
+
+.page-headerrs {
+    min-height: 340px; /* Default height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: linear-gradient(rgba(22, 22, 22, 0.212), rgba(22, 22, 22, 0.329)), url(../img/Consumer-Electronics.jpg) center center no-repeat;
+    background-size: cover;
+}
+
+
+
 .breadcrumb-item+.breadcrumb-item::before {
     color: var(--light);
 }
@@ -991,3 +1004,62 @@
 }
 
 
+/* logo slider starts */
+.logos {
+    overflow: hidden;
+    padding: 30px 0;
+    white-space: nowrap;
+    position: relative;
+    background: #f8f9fa;
+}
+.logos:before, .logos:after {
+    position: absolute;
+    top: 0;
+    content: '';
+    width: 100px;
+    height: 100%;
+    z-index: 2;
+}
+.logos:before {
+    left: 0;
+    background: linear-gradient(to left, rgba(255,255,255,0), rgb(255, 255, 255));
+}
+.logos:after {
+    right: 0;
+    background: linear-gradient(to right, rgba(255,255,255,0), rgb(255, 255, 255));
+}
+.logo_items {
+    display: flex;
+    gap: 20px;
+    animation: 20s slides infinite linear;
+}
+.logos:hover .logo_items {
+    animation-play-state: paused;
+}
+.logo_items img {
+    height: 80px;
+    max-width: 100%;
+}
+@keyframes slides {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-60%);
+    }
+}
+@media (max-width: 768px) {
+    .logo_items {
+        gap: 10px;
+        animation-duration: 30s;
+    }
+    .logo_items img {
+        height: 60px;
+    }
+    .logos:before, .logos:after {
+        width: 50px;
+    }
+}
+
+
+/* logo slider end */
