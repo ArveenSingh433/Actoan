@@ -296,6 +296,17 @@
 }
 
 
+
+.page-header3 {
+    min-height: 340px; /* Default height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: linear-gradient(rgba(22, 22, 22, .7), rgba(22, 22, 22, .7)), url(../img/storage1.jpg) center center no-repeat;
+    background-size: cover;
+}
+
 .page-headerrs {
     min-height: 340px; /* Default height */
     display: flex;
@@ -305,6 +316,31 @@
     background: linear-gradient(rgba(22, 22, 22, 0.212), rgba(22, 22, 22, 0.329)), url(../img/Consumer-Electronics.jpg) center center no-repeat;
     background-size: cover;
 }
+
+.page-header2 {
+    min-height: 340px; /* Default height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: linear-gradient(rgba(22, 22, 22, 0.212), rgba(22, 22, 22, 0.329)), url(../img/IoT.jpg) center center no-repeat;
+    background-size: cover;
+}
+
+
+
+.page-header1 {
+    min-height: 340px; /* Default height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: linear-gradient(rgba(22, 22, 22, 0.212), rgba(22, 22, 22, 0.329)), 
+    url(../img/EdgeComputingbanner.jpg) center center / cover no-repeat;
+    background-size: cover;
+}
+
+
 
 
 
