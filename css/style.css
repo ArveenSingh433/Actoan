@@ -340,7 +340,64 @@
     background-size: cover;
 }
 
+.page-header8 {
+    min-height: 340px; /* Default height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: linear-gradient(rgba(22, 22, 22, 0.212), rgba(22, 22, 22, 0.329)), 
+    url(../img/Kernel-Engineering.jpg) center center / cover no-repeat;
+    background-size: cover;
+}
 
+
+.page-header9 {
+    min-height: 340px; /* Default height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: linear-gradient(rgba(22, 22, 22, 0.212), rgba(22, 22, 22, 0.329)), 
+    url(../img/Hardware-Product-Engineering.jpg) center center / cover no-repeat;
+    background-size: cover;
+}
+
+
+.page-header10 {
+    min-height: 340px; /* Default height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: linear-gradient(rgba(22, 22, 22, 0.212), rgba(22, 22, 22, 0.329)), 
+    url(../img/software.jpg) center center / cover no-repeat;
+    background-size: cover;
+}
+
+
+.page-header11 {
+    min-height: 340px; /* Default height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: linear-gradient(rgba(22, 22, 22, 0.212), rgba(22, 22, 22, 0.329)), 
+    url(../img/bug.jpg) center center / cover no-repeat;
+    background-size: cover;
+}
+
+
+.page-header13 {
+    min-height: 340px; /* Default height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: linear-gradient(rgba(22, 22, 22, 0.212), rgba(22, 22, 22, 0.329)), 
+    url(../img/electronic.jpg) center center / cover no-repeat;
+    background-size: cover;
+}
 
 
 
