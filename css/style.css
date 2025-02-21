@@ -189,7 +189,7 @@
 
 .header-carousel .owl-nav {
     position: absolute;
-    width: 400px;
+    width: 280px;
     height: 45px;
     bottom: 30px;
     left: 50%;
@@ -1156,3 +1156,138 @@
 
 
 /* logo slider end */
+.dropdown-menu {
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border: none; /* Removes default border */
+}
+
+/* Add lines (borders) between dropdown items */
+.dropdown-menu .dropdown-item {
+    border-bottom: 1px solid #dddddd; /* Light grey line */
+    padding: 10px 15px;
+}
+
+
+
+
+/* test start */
+
+
+
+
+/* start end */
+
+.bandeau {
+    background-color: rgb(211, 211, 211); /* Black background */
+    text-align: center;
+    font-size: 22px;
+    color: rgb(17, 17, 17);
+    text-transform: uppercase;
+    padding: 20px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  .banner-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fadeUp 3s infinite both;
+    gap: 10px;
+  }
+  
+ 
+  
+  .bandeau-new {
+    font-size: 22px;
+    color: #0528f1; /* Gold color for attention */
+    animation: spanNew 3s infinite both;
+  }
+  
+  .bandeau-text {
+    animation: spanText 3s infinite both;
+  }
+  
+  @keyframes truck {
+    0% {
+      transform: translateX(-40px);
+      opacity: 0;
+    }
+    6%, 100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes spanNew {
+    0%, 5% {
+      transform: translateX(-30px);
+      opacity: 0;
+    }
+    15% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes spanText {
+    0%, 10% {
+      transform: translateY(-20px);
+      opacity: 0;
+    }
+    20% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes fadeUp {
+    0% {
+      opacity: 0;
+    }
+    10%, 90% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .bandeau {
+      font-size: 16px;
+      padding: 15px;
+    }
+    img {
+      width: 30px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .bandeau {
+      flex-direction: column;
+      text-align: center;
+      font-size: 14px;
+    }
+    img {
+      width: 25px;
+      margin-bottom: 10px;
+    }
+  }
+  
+
+  /* Background Animation */
+@keyframes backgroundAnimation {
+    0% { background: #ebeaea }
+    50% { background: #9b9b9b; }
+    100% { background: #bdbdbd; }
+}
+
+.bandeau {
+    animation: backgroundAnimation 5s infinite alternate;
+}
