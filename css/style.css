@@ -1177,3 +1177,95 @@
 
 /* start end */
 
+/* General Styling for Banner */
+.bandeau {
+    background-color: #d3d3d3;
+    text-align: center;
+    font-size: 22px;
+    color: #111;
+    text-transform: uppercase;
+    padding: 20px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    animation: backgroundAnimation 5s infinite alternate;
+}
+
+.banner-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fadeUp 3s infinite both;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.bandeau-new {
+    font-size: 22px;
+    color: #0528f1;
+    animation: spanNew 3s infinite both;
+}
+
+.bandeau-text {
+    animation: spanText 3s infinite both;
+}
+
+/* Keyframe Animations */
+@keyframes spanNew {
+    0%, 5% {
+        transform: translateX(-30px);
+        opacity: 0;
+    }
+    15% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes spanText {
+    0%, 10% {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    20% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeUp {
+    0% {
+        opacity: 0;
+    }
+    10%, 90% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes backgroundAnimation {
+    0% { background: #ebeaea; }
+    50% { background: #cccccc; }
+    100% { background: #bdbdbd; }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .bandeau {
+        font-size: 18px;
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .bandeau {
+        flex-direction: column;
+        font-size: 16px;
+        padding: 12px;
+    }
+}
