@@ -1274,8 +1274,8 @@
 
 .sticker {
     position: absolute;
-    top: 30px;
-    left: -10px;
+    top: 10px;
+  left: -50px;
     background: red;
     color: white;
     font-size: 11px;
@@ -1293,8 +1293,8 @@
 
   .sticker2 {
     position: absolute;
-    top: 30px;
-    left: -34px;
+    top: 10px;
+    left: -50px;
     background: red;
     color: white;
     font-size: 11px;
@@ -1308,9 +1308,9 @@
 
   .sticker3 {
     position: absolute;
-
-    top: 30px;
-    left: -20px;
+    left: -50px;
+    top: 10px;
+  
     background: red;
     color: white;
     font-size: 11px;
@@ -1323,8 +1323,8 @@
   .sticker4 {
     position: absolute;
 
-    top: 30px;
-    left: -25px;
+    top: 10px;
+    left: -50px;
     background: red;
     color: white;
     font-size: 11px;
