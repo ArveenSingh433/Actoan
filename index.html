@@ -1,334 +1,340 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="utf-8">
-    <title>Actoan Techlabs </title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="" name="keywords">
-    <meta content="" name="description">
+  <head>
+    <meta charset="utf-8" />
+    <title>Actoan Techlabs</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="" name="keywords" />
+    <meta content="" name="description" />
 
     <!-- Favicon -->
-    <link href="img/actoan logo.png" rel="icon">
-    
-<!-- Bootstrap CSS -->
-<!-- Bootstrap Bundle (includes Popper.js) -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="img/actoan logo.png" rel="icon" />
 
+    <!-- Bootstrap CSS -->
+    <!-- Bootstrap Bundle (includes Popper.js) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.1/assets/owl.carousel.min.css">
-    <link rel="stylesheet" href="http://themes.audemedia.com/html/goodgrowth/css/owl.theme.default.min.css">
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.1/assets/owl.carousel.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="http://themes.audemedia.com/html/goodgrowth/css/owl.theme.default.min.css"
+    />
 
     <!-- Google Web Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&family=Roboto:wght@500;700;900&display=swap"
-        rel="stylesheet">
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&family=Roboto:wght@500;700;900&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- Icon Font Stylesheet -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
 
     <!-- Libraries Stylesheet -->
-    <link href="lib/animate/animate.min.css" rel="stylesheet">
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+    <link href="lib/animate/animate.min.css" rel="stylesheet" />
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet" />
 
     <!-- Customized Bootstrap Stylesheet -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
 
     <!-- Template Stylesheet -->
-    <link href="css/style.css" rel="stylesheet">
-    <link href="css/style2.css" rel="stylesheet">
-</head>
-<style>
+    <link href="css/style.css" rel="stylesheet" />
+    <link href="css/style2.css" rel="stylesheet" />
+  </head>
+  <style>
     /* Add left and right margin to navbar */
     .navbar {
-        margin-left: 0px;
-        margin-right: 0px;
+      margin-left: 0px;
+      margin-right: 0px;
     }
 
     /* Active and Hover Effects on Nav Links */
     .nav-link {
-        position: relative;
-        /* To position the red outline */
-        transition: all 0.3s ease;
-        /* Smooth transition */
+      position: relative;
+      /* To position the red outline */
+      transition: all 0.3s ease;
+      /* Smooth transition */
     }
 
     /* Red Outline on Hover and Active State */
     .nav-link:hover,
     .nav-link.active {
-        transition: width 0.4s ease-in-out, left 0.4s ease-in-out;
-        /* Smooth animation */
-        color: #0741ad !important;
-        /* Red text color */
+      transition: width 0.4s ease-in-out, left 0.4s ease-in-out;
+      /* Smooth animation */
+      color: #0741ad !important;
+      /* Red text color */
     }
 
     .nav-link:hover::after,
     .nav-link.active::after {
-        content: "";
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        height: 2px;
-        background-color: #0741ad;
-        transition: width 0.4s ease-in-out, left 0.4s ease-in-out;
-        /* Smooth animation */
-
-
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background-color: #0741ad;
+      transition: width 0.4s ease-in-out, left 0.4s ease-in-out;
+      /* Smooth animation */
     }
 
     .nav-link:hover::after {
-        transition: width 0.4s ease-in-out, left 0.4s ease-in-out, transform 0.2s ease-in-out;
-        transform: scaleX(1.1);
-
+      transition: width 0.4s ease-in-out, left 0.4s ease-in-out,
+        transform 0.2s ease-in-out;
+      transform: scaleX(1.1);
     }
-
 
     /* Optional: Adjust the Navbar items for better spacing */
     .navbar-nav {
-        margin-left: auto;
-        display: flex;
-        align-items: center;
+      margin-left: auto;
+      display: flex;
+      align-items: center;
     }
 
     /* Responsive behavior */
     @media (max-width: 768px) {
-        .navbar {
-            /* margin-left: 10px;
+      .navbar {
+        /* margin-left: 10px;
             margin-right: 10px; */
-        }
+      }
     }
-
 
     /* Responsive Logo */
     .logo {
-        height: auto;
-        width: 100%;
-        /* Ensures logo scales properly */
-        max-height: 85px;
-        /* Max height for larger screens */
-        transition: transform 0.3s ease-in-out;
+      height: auto;
+      width: 100%;
+      /* Ensures logo scales properly */
+      max-height: 85px;
+      /* Max height for larger screens */
+      transition: transform 0.3s ease-in-out;
     }
 
     /* Optional: Hover effect for logo */
     .navbar-brand:hover .logo {
-        transform: scale(1.05);
-        /* Slightly enlarge logo on hover */
+      transform: scale(1.05);
+      /* Slightly enlarge logo on hover */
     }
 
     /* Navbar adjustment for small screen sizes */
     .navbar-nav {
-        margin-left: auto;
-        /* Right align the navbar items */
+      margin-left: auto;
+      /* Right align the navbar items */
     }
 
     /* Adjust logo size on mobile */
     @media (max-width: 768px) {
-        .logo {
-            max-height: 50px;
-            /* Smaller logo for mobile */
-        }
+      .logo {
+        max-height: 50px;
+        /* Smaller logo for mobile */
+      }
 
-        .navbar-nav {
-            margin-top: 15px;
-            /* Add top margin to make space for logo */
-        }
+      .navbar-nav {
+        margin-top: 15px;
+        /* Add top margin to make space for logo */
+      }
     }
 
     /* Mobile navbar items spacing */
     @media (max-width: 576px) {
-        .navbar-nav {
-            text-align: center;
-            /* Center align navbar items on mobile */
-        }
+      .navbar-nav {
+        text-align: center;
+        /* Center align navbar items on mobile */
+      }
 
-        .navbar-nav .nav-link {
-            padding-left: 10px;
-            padding-right: 10px;
-        }
+      .navbar-nav .nav-link {
+        padding-left: 10px;
+        padding-right: 10px;
+      }
 
-        .navbar-toggler {
-            margin-right: 10px;
-            /* Space out the navbar toggle button */
-        }
+      .navbar-toggler {
+        margin-right: 10px;
+        /* Space out the navbar toggle button */
+      }
     }
 
     /* Social media buttons styles */
     .btn-square {
-        border-radius: 50%;
+      border-radius: 50%;
     }
 
     .navbar-toggler-icon {
-        background-color: #ffffff;
-        /* Make the navbar toggler icon more visible */
+      background-color: #ffffff;
+      /* Make the navbar toggler icon more visible */
     }
-
 
     /* Pulse Button */
     .button {
-        display: inline-block;
-        padding: 10px 20px;
-        font-size: 18px;
-        font-weight: bold;
-        color: white;
-        background: #023ba4;
-        border-radius: 8px;
-        text-decoration: none;
-        transition: transform 0.3s ease, background 0.3s ease;
-        position: relative;
-        overflow: hidden;
+      display: inline-block;
+      padding: 10px 20px;
+      font-size: 18px;
+      font-weight: bold;
+      color: white;
+      background: #023ba4;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: transform 0.3s ease, background 0.3s ease;
+      position: relative;
+      overflow: hidden;
     }
 
     /* Button Hover */
     .button:hover {
-        color: #ffffff;
-        background: #023ba4;
-        transform: scale(1.05);
+      color: #ffffff;
+      background: #023ba4;
+      transform: scale(1.05);
     }
 
     /* Pulse Effect */
     .button-pulse {
-        animation: pulse 2s infinite 3s cubic-bezier(0.25, 0, 0, 1);
-        box-shadow: 0 0 0 0 rgba(1, 22, 139, 0.8);
+      animation: pulse 2s infinite 3s cubic-bezier(0.25, 0, 0, 1);
+      box-shadow: 0 0 0 0 rgba(1, 22, 139, 0.8);
     }
 
     @keyframes pulse {
-        0% {
-            box-shadow: 0 0 0 0 rgba(96, 146, 255, 0.8);
-        }
+      0% {
+        box-shadow: 0 0 0 0 rgba(96, 146, 255, 0.8);
+      }
 
-        100% {
-            box-shadow: 0 0 0 18px rgba(255, 87, 51, 0);
-        }
+      100% {
+        box-shadow: 0 0 0 18px rgba(255, 87, 51, 0);
+      }
     }
 
     /* Floating Effect */
     .button-float {
-        animation: float 1.5s ease-in-out infinite alternate;
+      animation: float 1.5s ease-in-out infinite alternate;
     }
 
     @keyframes float {
-        50% {
-            transform: translateY(-5px);
-        }
+      50% {
+        transform: translateY(-5px);
+      }
 
-        100% {
-            transform: translateY(-15px);
-        }
+      100% {
+        transform: translateY(-15px);
+      }
     }
 
     /* Typography */
     h1 {
-        font-weight: 300;
-        font-size: 2.2em;
-        line-height: 1.3;
-        padding-top: 40px;
+      font-weight: 300;
+      font-size: 2.2em;
+      line-height: 1.3;
+      padding-top: 40px;
     }
 
     p {
-        font-size: 1.0em;
-        opacity: 0.85;
-        /* padding: 10px 20px; */
+      font-size: 1em;
+      opacity: 0.85;
+      /* padding: 10px 20px; */
     }
 
     /* Responsive Design */
     @media (max-width: 600px) {
-        nav {
-            flex-direction: column;
-            gap: 10px;
-        }
+      nav {
+        flex-direction: column;
+        gap: 10px;
+      }
 
-        .button {
-            width: 80%;
-        }
+      .button {
+        width: 80%;
+      }
     }
 
-
     .owl-carousel-item {
-        height: 80vh;
+      height: 80vh;
     }
 
     .owl-carousel-item img {
-        height: 100%;
-        object-fit: cover;
+      height: 100%;
+      object-fit: cover;
     }
 
-
-
     @keyframes blurToClear {
-        from {
-            filter: blur(20px);
-            opacity: 0;
-        }
+      from {
+        filter: blur(20px);
+        opacity: 0;
+      }
 
-        to {
-            filter: blur(0);
-            opacity: 1;
-        }
+      to {
+        filter: blur(0);
+        opacity: 1;
+      }
     }
 
     .animated.blurToClear {
-        animation: blurToClear 1s ease-in-out;
+      animation: blurToClear 1s ease-in-out;
     }
 
     .animated.slideInRight {
-        animation: slideInRight 1s ease-in-out;
+      animation: slideInRight 1s ease-in-out;
     }
 
     .animated.slideInLeft {
-        animation: slideInLeft 1s ease-in-out;
+      animation: slideInLeft 1s ease-in-out;
     }
     .service-content h4 {
-    font-size: 18.2px; /* Default font size */
-}
+      font-size: 18.2px; /* Default font size */
+    }
 
-/* For screens up to 1337px */
-@media (max-width: 1337px) {
-
-    .service-content p {
+    /* For screens up to 1337px */
+    @media (max-width: 1337px) {
+      .service-content p {
         font-size: 14px;
-    }
+      }
 
-    .service-content h4 {
+      .service-content h4 {
         font-size: 18px; /* Override default */
+      }
     }
-}
 
-/* For screens up to 768px */
-@media (max-width: 768px) {
-    .service-content {
+    /* For screens up to 768px */
+    @media (max-width: 768px) {
+      .service-content {
         height: auto;
-    }
+      }
 
-    .service-content p {
+      .service-content p {
         font-size: 16px;
-    }
+      }
 
-    .service-content h4 {
+      .service-content h4 {
         font-size: 20px; /* Override previous styles */
+      }
     }
-}
+  </style>
 
-
-
-
-</style>
-
-<body>
+  <body>
     <!-- Spinner Start -->
-    <div id="spinner"
-        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-        <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
-            <span class="sr-only">Loading...</span>
-        </div>
+    <div
+      id="spinner"
+      class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center"
+    >
+      <div
+        class="spinner-border text-primary"
+        style="width: 3rem; height: 3rem"
+        role="status"
+      >
+        <span class="sr-only">Loading...</span>
+      </div>
     </div>
     <!-- Spinner End -->
-
 
     <!-- Topbar Start -->
     <!-- <div class="container-fluid bg-dark px-5">
@@ -364,89 +370,159 @@
         </div>
     </div> -->
     <!-- Topbar End -->
-  <!-- new navbar -->
-   
-<!-- navbar end new -->
+    <!-- new navbar -->
+
+    <!-- navbar end new -->
 
     <nav class="navbar navbar-expand-lg navbar-light bg-light px-3 sticky-top">
-        <div class="container-fluid">
-            <!-- Logo -->
-            <a class="navbar-brand" href="index.html">
-                <img src="img/actoan logo.png" alt="Actoan Logo" class="img-fluid" style="max-height: 75px;">
-            </a>
+      <div class="container-fluid">
+        <!-- Logo -->
+        <a class="navbar-brand" href="index.html">
+          <img
+            src="img/actoan logo.png"
+            alt="Actoan Logo"
+            class="img-fluid"
+            style="max-height: 75px"
+          />
+        </a>
 
-            <!-- Toggler Button -->
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
-                aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+        <!-- Toggler Button -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarCollapse"
+          aria-controls="navbarCollapse"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
-            <!-- Navbar Links -->
-            <div class="collapse navbar-collapse" id="navbarCollapse">
-                <ul class="navbar-nav ms-auto align-items-lg-center">
-                    <li class="nav-item">
-                        <a href="index.html" class="nav-link active">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="about.html" class="nav-link">About Us</a>
-                    </li>
+        <!-- Navbar Links -->
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav ms-auto align-items-lg-center">
+            <li class="nav-item">
+              <a href="index.html" class="nav-link active">Home</a>
+            </li>
+            <li class="nav-item">
+              <a href="about.html" class="nav-link">About Us</a>
+            </li>
 
-                    <!-- Domain Dropdown -->
-                    <li class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Domain</a>
-                        <ul class="dropdown-menu">
-                            <li><a href="Consumer Electronics.html" class="dropdown-item">Consumer Electronics</a></li>
-                            <li><a href="Edge Computing.html" class="dropdown-item">Edge Computing</a></li>
-                            <li><a href="internetofthings.html" class="dropdown-item">Internet of Things (IoT)</a></li>
-                            <li><a href="Storage.html" class="dropdown-item">Storage</a></li>
-                          
-                        </ul>
-                    </li>
+            <!-- Domain Dropdown -->
+            <li class="nav-item dropdown">
+              <a
+                href="#"
+                class="nav-link dropdown-toggle"
+                data-bs-toggle="dropdown"
+                >Domain</a
+              >
+              <ul class="dropdown-menu">
+                <li>
+                  <a href="Consumer Electronics.html" class="dropdown-item"
+                    >Consumer Electronics</a
+                  >
+                </li>
+                <li>
+                  <a href="Edge Computing.html" class="dropdown-item"
+                    >Edge Computing</a
+                  >
+                </li>
+                <li>
+                  <a href="internetofthings.html" class="dropdown-item"
+                    >Internet of Things (IoT)</a
+                  >
+                </li>
+                <li>
+                  <a href="Storage.html" class="dropdown-item">Storage</a>
+                </li>
+              </ul>
+            </li>
 
-                    <!-- Services Dropdown -->
-                    <li class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Services</a>
-                        <ul class="dropdown-menu">
-                            <li><a href="Software Product Engineering.html" class="dropdown-item">Software Product Engineering</a></li>
-                            <li><a href="Hardware Product Engineering.html" class="dropdown-item">Hardware Product Engineering</a></li>
-                            <li><a href="Testing and Validation.html" class="dropdown-item">Testing and Validation</a></li>
-                            <li><a href="Electronic Manufacturing and Sourcing Services.html" class="dropdown-item">Electronic Manufacturing and <br>Sourcing Services</a></li>
-                            <li><a href="Kernel Engineering, Porting and Migration.html" class="dropdown-item">Kernel Engineering,<br> Porting and Migration</a></li>
-                     
-                         
-                         
-                           
-                        </ul>
-                    </li>
+            <!-- Services Dropdown -->
+            <li class="nav-item dropdown">
+              <a
+                href="#"
+                class="nav-link dropdown-toggle"
+                data-bs-toggle="dropdown"
+                >Services</a
+              >
+              <ul class="dropdown-menu">
+                <li>
+                  <a
+                    href="Software Product Engineering.html"
+                    class="dropdown-item"
+                    >Software Product Engineering</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="Hardware Product Engineering.html"
+                    class="dropdown-item"
+                    >Hardware Product Engineering</a
+                  >
+                </li>
+                <li>
+                  <a href="Testing and Validation.html" class="dropdown-item"
+                    >Testing and Validation</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="Electronic Manufacturing and Sourcing Services.html"
+                    class="dropdown-item"
+                    >Electronic Manufacturing and <br />Sourcing Services</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="Kernel Engineering, Porting and Migration.html"
+                    class="dropdown-item"
+                    >Kernel Engineering,<br />
+                    Porting and Migration</a
+                  >
+                </li>
+              </ul>
+            </li>
 
-                    <li class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Products</a>
-                        <ul class="dropdown-menu">
-                            <li><a href="Designs for Customer.html" class="dropdown-item">Design for Customer</a></li>
-                            <li><a href="Inhouse.html" class="dropdown-item">In house</a></li>   
-                        </ul>
-                    </li>
+            <li class="nav-item dropdown">
+              <a
+                href="#"
+                class="nav-link dropdown-toggle"
+                data-bs-toggle="dropdown"
+                >Products</a
+              >
+              <ul class="dropdown-menu">
+                <li>
+                  <a href="Designs for Customer.html" class="dropdown-item"
+                    >Design for Customer</a
+                  >
+                </li>
+                <li>
+                  <a href="Inhouse.html" class="dropdown-item">In House</a>
+                </li>
+              </ul>
+            </li>
 
-                    
-                    <li class="nav-item">
-                        <a href="career.html" class="nav-link">Career</a>
-                    </li>
+            <li class="nav-item">
+              <a href="career.html" class="nav-link">Career</a>
+            </li>
 
-                    <!-- Contact Button -->
-                    <li class="nav-item">
-                        <a href="contact.html" class="btn btn-primary ms-2 pulsing-btn">Contact Us</a>
-                    </li>
-                </ul>
-            </div>
+            <!-- Contact Button -->
+            <li class="nav-item">
+              <a href="contact.html" class="btn btn-primary ms-2 pulsing-btn"
+                >Contact Us</a
+              >
+            </li>
+          </ul>
         </div>
+      </div>
     </nav>
-
-
 
     <!-- Carousel Start -->
     <div class="container-fluid p-0 pb-5">
-        <div class="owl-carousel header-carousel position-relative">
-            <!-- <div class="owl-carousel-item position-relative">
+      <div class="owl-carousel header-carousel position-relative">
+        <!-- <div class="owl-carousel-item position-relative">
                 <img class="img-fluid animated blurToClear" src="img/carousel-1.jpg" alt="" id="img1">
                 <div class="carousel-inner">
                     <div class="container">
@@ -460,7 +536,7 @@
                     </div>
                 </div>
             </div> -->
-            <!-- <div class="owl-carousel-item position-relative">
+        <!-- <div class="owl-carousel-item position-relative">
                 <img class="img-fluid animated slideInRight" src="img/carousel-2.jpg" alt="" id="img2">
                 <div class="carousel-inner">
                     <div class="container">
@@ -474,123 +550,152 @@
                     </div>
                 </div>
             </div> -->
-            <div class="owl-carousel-item position-relative">
-                <img class="img-fluid animated blurToClear" src="img/carousel-3.jpg" alt="" id="img3">
-                <div class="carousel-inner">
-                    <div class="container">
-                        <div class="row justify-content-center">
-                            <div class="col-12 col-lg-8 text-center">
-                                <h1 class="display-3 text-white animated slideInDown mb-4">IoT-Integrated Security</h1>
-                                <p class="fs-5 fw-medium text-white mb-4 pb-2">Seamless connectivity
-                                    with smart devices.</p>
-                               
-                            </div>
-                        </div>
-                    </div>
+        <div class="owl-carousel-item position-relative">
+          <img
+            class="img-fluid animated blurToClear"
+            src="img/carousel-3.jpg"
+            alt=""
+            id="img3"
+          />
+          <div class="carousel-inner">
+            <div class="container">
+              <div class="row justify-content-center">
+                <div class="col-12 col-lg-8 text-center">
+                  <h1 class="display-3 text-white animated slideInDown mb-4">
+                    IoT-Integrated Security
+                  </h1>
+                  <p class="fs-5 fw-medium text-white mb-4 pb-2">
+                    Seamless connectivity with smart devices.
+                  </p>
                 </div>
+              </div>
             </div>
-
-            <div class="owl-carousel-item position-relative">
-                <img class="img-fluid animated blurToClear" src="img/carousel-4.4.png" alt="" id="img3">
-                <div class="carousel-inner">
-                    <div class="container">
-                        <div class="row justify-content-center">
-                            <div class="col-12 col-lg-8 text-center">
-                                <h1 class="display-3 text-white animated slideInUp mb-4">Custom R&D Solutions</h1>
-                                <p class="fs-5 text-white mb-4 pb-2">
-                                    Tailored research for specific security challenges.
-                                </p>
-                                
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="owl-carousel-item position-relative">
-                <img class="img-fluid animated slideInLeft" src="img/carousel-cyber.png" alt="" id="img3">
-                <div class="carousel-inner">
-                    <div class="container">
-                        <div class="row justify-content-center">
-                            <div class="col-12 col-lg-8 text-center">
-                                <h1 class="display-3 text-white animated slideInUp mb-4">Cybersecurity for CCTV</h1>
-                                <p class="fs-5 text-white mb-4 pb-2">
-                                    Protecting surveillance systems from cyber threats.
-                                </p>
-                                
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="owl-carousel-item position-relative">
-                <img class="img-fluid animated slideInLeft" src="img/setupbox.png" alt="" id="img3">
-                <div class="carousel-inner">
-                    <div class="container">
-                        <div class="row justify-content-center">
-                            <div class="col-12 col-lg-8 text-center">
-                                <h1 class="display-3 text-white animated slideInUp mb-4">Android Box</h1>
-                                <p class="fs-5 text-white mb-4 pb-2">
-                                Turn Normal TV set to a Smart TV
-                                </p>
-                                
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-
-            <div class="owl-carousel-item position-relative">
-                <img class="img-fluid animated slideInLeft" src="img/setupbox2.png" alt="" id="img3">
-                <div class="carousel-inner">
-                    <div class="container">
-                        <div class="row justify-content-center">
-                            <div class="col-12 col-lg-8 text-center">
-                                <h1 class="display-3 text-white animated slideInUp mb-4">Set Top Box </h1>
-                                <p class="fs-5 text-white mb-4 pb-2">
-                                    DVB-C,DVB-S/S2, CAS Enable, FTA , IRD, DTO 
-                                </p>
-                                
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-
-
-
-
-            
-            <div class="owl-carousel-item position-relative">
-                <img class="img-fluid animated slideInLeft" src="img/carousel-4.jpg" alt="" id="img3">
-                <div class="carousel-inner">
-                    <div class="container">
-                        <div class="row justify-content-center">
-                            <div class="col-12 col-lg-8 text-center">
-                                <h1 class="display-3 text-white animated slideInUp mb-4">Pioneering AI-Driven Chip Innovations</h1>
-                                <p class="fs-5 text-white mb-4 pb-2">
-                                    Our cutting-edge research in semiconductor and AI-driven processors is shaping the future of computing, 
-                                    enabling faster, smarter, and more efficient technology solutions.
-                                </p>
-                                
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-
+          </div>
         </div>
+
+        <div class="owl-carousel-item position-relative">
+          <img
+            class="img-fluid animated blurToClear"
+            src="img/carousel-4.4.png"
+            alt=""
+            id="img3"
+          />
+          <div class="carousel-inner">
+            <div class="container">
+              <div class="row justify-content-center">
+                <div class="col-12 col-lg-8 text-center">
+                  <h1 class="display-3 text-white animated slideInUp mb-4">
+                    Custom R&D Solutions
+                  </h1>
+                  <p class="fs-5 text-white mb-4 pb-2">
+                    Tailored research for specific security challenges.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="owl-carousel-item position-relative">
+          <img
+            class="img-fluid animated slideInLeft"
+            src="img/carousel-cyber.png"
+            alt=""
+            id="img3"
+          />
+          <div class="carousel-inner">
+            <div class="container">
+              <div class="row justify-content-center">
+                <div class="col-12 col-lg-8 text-center">
+                  <h1 class="display-3 text-white animated slideInUp mb-4">
+                    Cybersecurity for CCTV
+                  </h1>
+                  <p class="fs-5 text-white mb-4 pb-2">
+                    Protecting surveillance systems from cyber threats.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="owl-carousel-item position-relative">
+          <img
+            class="img-fluid animated slideInLeft"
+            src="img/setupbox.png"
+            alt=""
+            id="img3"
+          />
+          <div class="carousel-inner">
+            <div class="container">
+              <div class="row justify-content-center">
+                <div class="col-12 col-lg-8 text-center">
+                  <h1 class="display-3 text-white animated slideInUp mb-4">
+                    Android Box
+                  </h1>
+                  <p class="fs-5 text-white mb-4 pb-2">
+                    Turn Normal TV set to a Smart TV
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="owl-carousel-item position-relative">
+          <img
+            class="img-fluid animated slideInLeft"
+            src="img/setupbox2.png"
+            alt=""
+            id="img3"
+          />
+          <div class="carousel-inner">
+            <div class="container">
+              <div class="row justify-content-center">
+                <div class="col-12 col-lg-8 text-center">
+                  <h1 class="display-3 text-white animated slideInUp mb-4">
+                    Set Top Box
+                  </h1>
+                  <p class="fs-5 text-white mb-4 pb-2">
+                    DVB-C,DVB-S/S2, CAS Enable, FTA , IRD, DTO
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="owl-carousel-item position-relative">
+          <img
+            class="img-fluid animated slideInLeft"
+            src="img/carousel-4.jpg"
+            alt=""
+            id="img3"
+          />
+          <div class="carousel-inner">
+            <div class="container">
+              <div class="row justify-content-center">
+                <div class="col-12 col-lg-8 text-center">
+                  <h1 class="display-3 text-white animated slideInUp mb-4">
+                    Pioneering AI-Driven Chip Innovations
+                  </h1>
+                  <p class="fs-5 text-white mb-4 pb-2">
+                    Our cutting-edge research in semiconductor and AI-driven
+                    processors is shaping the future of computing, enabling
+                    faster, smarter, and more efficient technology solutions.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
     <!-- Carousel End -->
 
-
- <!-- Services Section -->
-<!-- <div class="service-area">
+    <!-- Services Section -->
+    <!-- <div class="service-area">
     <div class="container-fluid">
         <div class="bg- rounded px-3 px-md-4 px-lg-5 py-5">
             <div class="row text-center">
@@ -604,8 +709,8 @@
                 </div>
             </div> -->
 
-            <!-- Responsive Service Cards -->
-            <!-- <div class="row text-center justify-content-center">
+    <!-- Responsive Service Cards -->
+    <!-- <div class="row text-center justify-content-center">
                 <div class="col-xl-2 col-lg-4 col-md-6 col-sm-12 mb-4 d-flex">
                     <div class="service-single-box wow fadeInUp flex-grow-1 h-100" data-wow-delay="0.2s" data-wow-duration="1s">
                         <div class="service-thumb">
@@ -685,51 +790,66 @@
     </div>
 </div> -->
 
-
-
     <!-- About Start -->
-    <div class="container-fluid" style="background-color: #ececec;">
-        <div class="container overflow-hidden my-5">
-            <div class="bg- rounded px-3 px-md-4 px-lg-5 py-5">
-                <div class="row g-5 align-items-center">
-                    <!-- Image Section -->
-                    <div class="col-lg-6 d-flex justify-content-center wow fadeInUp" data-wow-delay="0.5s">
-                        <div class="position-relative w-100" style="max-width: 400px; min-height: 280px;">
-                            <img class="img-fluid w-100 h-auto rounded mt-5" src="img/about2.png" style="object-fit: cover;"
-                                alt="About Us Image">
-                        </div>
-                    </div>
-
-                    <!-- Text Section -->
-                    <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
-                        <div class="p-3 p-md-4 p-lg-5">
-                            <h1 class="display-5 mb-4">About <span style="color: #023ba4;">Us</span></h1>
-                            <div class="bg-primary mb-3" style="width: 60px; height: 2px;"></div>
-                            <p class="mb-4 pb-2 text-muted">
-                                At <strong>Actoan Techlabs Pvt Ltd,</strong> we specialize in cutting-edge research and
-                                development in the CCTV camera industry.
-                                Our mission is to revolutionize surveillance technology with innovative,
-                                high-performance, and AI-driven security solutions.
-                                Whether you're looking for advanced imaging, real-time analytics, or next-generation
-                                security systems, we are at the forefront of innovation.
-                            </p>
-                            <p class="mb-4 pb-2 text-muted">
-                                We strongly believe in Inclusive Growth, Empowering the team, and providing an
-                                environment conducive to incubating new ideas,
-                                creating innovation, and excellence in technology solutions that enable customer
-                                success.
-                            </p>
-                            <a href="about.html" class="btn btn-primary rounded-pill py-3 px-5 mb-4">Know More</a>
-                        </div>
-                    </div>
-                </div>
+    <div class="container-fluid" style="background-color: #ececec">
+      <div class="container overflow-hidden my-5">
+        <div class="bg- rounded px-3 px-md-4 px-lg-5 py-5">
+          <div class="row g-5 align-items-center">
+            <!-- Image Section -->
+            <div
+              class="col-lg-6 d-flex justify-content-center wow fadeInUp"
+              data-wow-delay="0.5s"
+            >
+              <div
+                class="position-relative w-100"
+                style="max-width: 400px; min-height: 280px"
+              >
+                <img
+                  class="img-fluid w-100 h-auto rounded mt-5"
+                  src="img/about2.png"
+                  style="object-fit: cover"
+                  alt="About Us Image"
+                />
+              </div>
             </div>
+
+            <!-- Text Section -->
+            <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
+              <div class="p-3 p-md-4 p-lg-5">
+                <h1 class="display-5 mb-4">
+                  About <span style="color: #023ba4">Us</span>
+                </h1>
+                <div
+                  class="bg-primary mb-3"
+                  style="width: 60px; height: 2px"
+                ></div>
+                <p class="mb-4 pb-2 text-muted">
+                  At <strong>Actoan Techlabs Pvt Ltd,</strong> we specialize in
+                  cutting-edge research and development in the CCTV camera
+                  industry. Our mission is to revolutionize surveillance
+                  technology with innovative, high-performance, and AI-driven
+                  security solutions. Whether you're looking for advanced
+                  imaging, real-time analytics, or next-generation security
+                  systems, we are at the forefront of innovation.
+                </p>
+                <p class="mb-4 pb-2 text-muted">
+                  We strongly believe in Inclusive Growth, Empowering the team,
+                  and providing an environment conducive to incubating new
+                  ideas, creating innovation, and excellence in technology
+                  solutions that enable customer success.
+                </p>
+                <a
+                  href="about.html"
+                  class="btn btn-primary rounded-pill py-3 px-5 mb-4"
+                  >Know More</a
+                >
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
     </div>
     <!-- About End -->
-
-
-
 
     <!-- Service Start -->
     <!-- <div class="container-xxl py-5">
@@ -784,434 +904,512 @@
     </div> -->
     <!-- Service End -->
 
-<!-- Feature Start -->
-<div class="container-fluid bg-light overflow-hidden my-5 px-0">
-    <div class="container-fluid feature px-0">
+    <!-- Feature Start -->
+    <div class="container-fluid bg-light overflow-hidden my-5 px-0">
+      <div class="container-fluid feature px-0">
         <div class="row g-0">
-            <!-- Left Side Content -->
-            <div class="col-lg-6 feature-text py-5 wow fadeIn d-flex align-items-center" data-wow-delay="0.5s"
-                style="background-image: url(img/aboutbackground.jpg); background-size: cover; background-position: center;">
-                <div class="p-4 p-lg-5 w-100">
-                    <h1 class="display-5 mb-3 text-white text-center text-lg-start">Why Choose Us</h1>
-                    <div class="bg-primary mb-4 mx-auto mx-lg-0" style="width: 60px; height: 2px;"></div>
-                    <div class="row row-cols-1 row-cols-md-2 g-4">
-                        <!-- Feature Items -->
-                        <div class="col">
-                            <div class="d-flex align-items-center">
-                                <div class="btn-square bg-white rounded-circle d-flex justify-content-center align-items-center"
-                                    style="width: 70px; height: 70px;">
-                                    <img class="img-fluid" src="img/icon/icon-7.png" alt="Icon" style="max-width: 50px;">
-                                </div>
-                                <div class="ms-3">
-                                    <h5 class="text-primary mb-2">Innovative Technology</h5>
-                                    <p class="mb-0 text-white" style="font-size: 0.9rem;">We push the boundaries of CCTV development.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="d-flex align-items-center">
-                                <div class="btn-square bg-white rounded-circle d-flex justify-content-center align-items-center"
-                                    style="width: 70px; height: 70px;">
-                                    <img class="img-fluid" src="img/icon/icon-8.png" alt="Icon" style="max-width: 50px;">
-                                </div>
-                                <div class="ms-3">
-                                    <h5 class="text-primary mb-2">Expert R&D Team</h5>
-                                    <p class="mb-0 text-white" style="font-size: 0.9rem;">Hardware, Software, and Mechanical Engineers.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="d-flex align-items-center">
-                                <div class="btn-square bg-white rounded-circle d-flex justify-content-center align-items-center"
-                                    style="width: 70px; height: 70px;">
-                                    <img class="img-fluid" src="img/icon/icon-9.png" alt="Icon" style="max-width: 50px;">
-                                </div>
-                                <div class="ms-3">
-                                    <h5 class="text-primary mb-2">Custom Solutions</h5>
-                                    <p class="mb-0 text-white" style="font-size: 0.9rem;">Tailored technology to meet security needs.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="d-flex align-items-center">
-                                <div class="btn-square bg-white rounded-circle d-flex justify-content-center align-items-center"
-                                    style="width: 70px; height: 70px;">
-                                    <img class="img-fluid" src="img/icon/icon-10.png" alt="Icon" style="max-width: 50px;">
-                                </div>
-                                <div class="ms-3">
-                                    <h5 class="text-primary mb-2">Industry Leadership</h5>
-                                    <p class="mb-0 text-white" style="font-size: 0.9rem;">Trusted by businesses and governments worldwide.</p>
-                                </div>
-                            </div>
-                        </div>
+          <!-- Left Side Content -->
+          <div
+            class="col-lg-6 feature-text py-5 wow fadeIn d-flex align-items-center"
+            data-wow-delay="0.5s"
+            style="
+              background-image: url(img/aboutbackground.jpg);
+              background-size: cover;
+              background-position: center;
+            "
+          >
+            <div class="p-4 p-lg-5 w-100">
+              <h1 class="display-5 mb-3 text-white text-center text-lg-start">
+                Why Choose Us
+              </h1>
+              <div
+                class="bg-primary mb-4 mx-auto mx-lg-0"
+                style="width: 60px; height: 2px"
+              ></div>
+              <div class="row row-cols-1 row-cols-md-2 g-4">
+                <!-- Feature Items -->
+                <div class="col">
+                  <div class="d-flex align-items-center">
+                    <div
+                      class="btn-square bg-white rounded-circle d-flex justify-content-center align-items-center"
+                      style="width: 70px; height: 70px"
+                    >
+                      <img
+                        class="img-fluid"
+                        src="img/icon/icon-7.png"
+                        alt="Icon"
+                        style="max-width: 50px"
+                      />
                     </div>
+                    <div class="ms-3">
+                      <h5 class="text-primary mb-2">Innovative Technology</h5>
+                      <p class="mb-0 text-white" style="font-size: 0.9rem">
+                        We push the boundaries of CCTV development.
+                      </p>
+                    </div>
+                  </div>
                 </div>
-            </div>
-            <!-- Right Side Image -->
-            <div class="col-lg-6 wow fadeIn p-0" style="min-height: 400px;" data-wow-delay="0.5s">
-                <div class="position-relative h-100">
-                    <img class="img-fluid w-100 h-100" src="img/feature.jpg" style="object-fit: cover;" alt="Feature Image">
+                <div class="col">
+                  <div class="d-flex align-items-center">
+                    <div
+                      class="btn-square bg-white rounded-circle d-flex justify-content-center align-items-center"
+                      style="width: 70px; height: 70px"
+                    >
+                      <img
+                        class="img-fluid"
+                        src="img/icon/icon-8.png"
+                        alt="Icon"
+                        style="max-width: 50px"
+                      />
+                    </div>
+                    <div class="ms-3">
+                      <h5 class="text-primary mb-2">Expert R&D Team</h5>
+                      <p class="mb-0 text-white" style="font-size: 0.9rem">
+                        Hardware, Software, and Mechanical Engineers.
+                      </p>
+                    </div>
+                  </div>
                 </div>
+                <div class="col">
+                  <div class="d-flex align-items-center">
+                    <div
+                      class="btn-square bg-white rounded-circle d-flex justify-content-center align-items-center"
+                      style="width: 70px; height: 70px"
+                    >
+                      <img
+                        class="img-fluid"
+                        src="img/icon/icon-9.png"
+                        alt="Icon"
+                        style="max-width: 50px"
+                      />
+                    </div>
+                    <div class="ms-3">
+                      <h5 class="text-primary mb-2">Custom Solutions</h5>
+                      <p class="mb-0 text-white" style="font-size: 0.9rem">
+                        Tailored technology to meet security needs.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="d-flex align-items-center">
+                    <div
+                      class="btn-square bg-white rounded-circle d-flex justify-content-center align-items-center"
+                      style="width: 70px; height: 70px"
+                    >
+                      <img
+                        class="img-fluid"
+                        src="img/icon/icon-10.png"
+                        alt="Icon"
+                        style="max-width: 50px"
+                      />
+                    </div>
+                    <div class="ms-3">
+                      <h5 class="text-primary mb-2">Industry Leadership</h5>
+                      <p class="mb-0 text-white" style="font-size: 0.9rem">
+                        Trusted by businesses and governments worldwide.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
+          </div>
+          <!-- Right Side Image -->
+          <div
+            class="col-lg-6 wow fadeIn p-0"
+            style="min-height: 400px"
+            data-wow-delay="0.5s"
+          >
+            <div class="position-relative h-100">
+              <img
+                class="img-fluid w-100 h-100"
+                src="img/feature.jpg"
+                style="object-fit: cover"
+                alt="Feature Image"
+              />
+            </div>
+          </div>
         </div>
-    </div>
-</div>
-
-<!-- Products Section -->
-
-<section
-  class="testimonials bg-light wow fadeInUp" data-wow-delay="0.5s"
-  style="
-    padding: 50px 0;
-    height: 750px;
-    position: relative;
-    z-index: 50;
-  "
->
-  <div class="container">
-    <div class="row">
-      <div class="text-center">
-        <h1
-          class="display-4 text-dark"
-          style="margin-bottom: 10px !important; text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.075);"
-        >
-          Products
-          <center>
-            <div class="bg-primary mb-3" style="width: 60px; height: 2px;"></div>
-        </center>
-        </h1>
       </div>
-      <div class="col-sm-12">
-        <div
-          id="customers-testimonials"
-          class="owl-carousel"
-          style="
-            margin-top: 58px;
-            margin-right: -1px;
-            padding-bottom: 0;
-          "
-        >
-          <!-- TESTIMONIAL 1 -->
-          <div
-            class="item text-center testimonial-item"
-            style="margin-bottom: 20px"
-          >
-            <center>
-              <img
-                class="img-circle"
-                src="img/Cam-360.png"
-                alt="Cam-360"
-                style="
-                  display: flex;
-                  width: 220px;
-                  height: 220px;
-                  object-fit: cover;
-                  transform: translateZ(10px);
-                "
-              />
-            </center>
-            <p class="mt-3 text-dark">
-              Next-Gen Home Security Camera.
-            </p>
-            <div
-              class="testimonial-name mt-3 bg-white text-light font-weight-bold"
+    </div>
+
+    <!-- Products Section -->
+
+    <section
+      class="testimonials bg-light wow fadeInUp"
+      data-wow-delay="0.5s"
+      style="padding: 50px 0; height: 750px; position: relative; z-index: 50"
+    >
+      <div class="container">
+        <div class="row">
+          <div class="text-center">
+            <h1
+              class="display-4 text-dark"
               style="
-                margin: -17px auto 0;
-                display: table;
-                background: #0b52d8;
-                padding: 9px 35px;
-                border-radius: 20px;
-                text-align: center;
-                color: #fff;
+                margin-bottom: 10px !important;
+                text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.075);
               "
             >
-              Cam-360
-            </div>
-            <a
-            href="Cam-360- Description.html"
-            style="
-              display: block;
-              margin: 5px auto;
-              text-decoration: none;
-              color: blue;
-              font-size: 14px;
-              font-weight: normal;
-              text-align: center;
-              transition: transform 0.2s ease-in-out;
-            "
-            onmouseover="this.style.transform='scale(1.1)'"
-            onmouseout="this.style.transform='scale(1)'"
-          >
-          Product Info
-          </a>
-
+              Products
+              <center>
+                <div
+                  class="bg-primary mb-3"
+                  style="width: 60px; height: 2px"
+                ></div>
+              </center>
+            </h1>
           </div>
-
-          <!-- TESTIMONIAL 2 -->
-          <div
-            class="item text-center testimonial-item"
-            style="margin-bottom: 20px"
-          >
-            <center>
-              <img
-                class="img-circle"
-                src="img/NON-PT 2K.png"
-                alt="NON-PT 2K"
-                style="
-                  display: flex;
-                  width: 220px;
-                  height: 220px;
-                  object-fit: cover;
-                  transform: translateZ(10px);
-                "
-              />
-            </center>
-            <p class="mt-3 text-dark">
-              High-quality fixed wireless CCTV camera
-            </p>
+          <div class="col-sm-12">
             <div
-              class="testimonial-name mt-3 bg-white text-light font-weight-bold"
-              style="
-                margin: -17px auto 0;
-                display: table;
-                background: #0b52d8;
-                padding: 9px 35px;
-                border-radius: 20px;
-                text-align: center;
-                color: #fff;
-              "
+              id="customers-testimonials"
+              class="owl-carousel"
+              style="margin-top: 58px; margin-right: -1px; padding-bottom: 0"
             >
-              NON-PT 2K
-            </div>
-            <a
-            href="Non-PT-2k.html"
-            style="
-              display: block;
-              margin: 5px auto;
-              text-decoration: none;
-              color: blue;
-              font-size: 14px;
-              font-weight: normal;
-              text-align: center;
-              transition: transform 0.2s ease-in-out;
-            "
-            onmouseover="this.style.transform='scale(1.1)'"
-            onmouseout="this.style.transform='scale(1)'"
-          >
-          Product Info
-          </a>
-
-          </div>
-
-          <!-- TESTIMONIAL 3 -->
-          <div
-            class="item text-center testimonial-item"
-            style="margin-bottom: 20px"
-          >
-            <center>
-              <img
-                class="img-circle"
-                src="img/non-pt cam eye.png"
-                alt="Non-PT Cam Eye"
-                style="
-                  display: flex;
-                  width: 220px;
-                  height: 220px;
-                  object-fit: cover;
-                  transform: translateZ(10px);
-                "
-              />
-            </center>
-            <p class="mt-3 text-dark">
-              Non-PT Cam - Wireless CCTV Security Camera for Home
-            </p>
-            <div
-              class="testimonial-name mt-3 bg-white text-light font-weight-bold"
-              style="
-                margin: -17px auto 0;
-                display: table;
-                background: #0b52d8;
-                padding: 9px 35px;
-                border-radius: 20px;
-                text-align: center;
-                color: #fff;
-              "
-            >
-              Non-PT Cam Eye
-            </div>
+              <!-- TESTIMONIAL 1 -->
+              <div
+                class="item text-center testimonial-item"
+                style="margin-bottom: 20px"
+              >
+                <div class="product-container">
+                  <div class="sticker">Design for <br />customers</div>
+                  <!-- Sticker added here -->
+                  <center>
+                    <img
+                      class="img-circle"
+                      src="img/Cam-360.png"
+                      alt="Cam-360"
+                      style="
+                        display: flex;
+                        width: 220px;
+                        height: 220px;
+                        object-fit: cover;
+                        transform: translateZ(10px);
+                      "
+                    />
+                  </center>
+                </div>
+                <p class="mt-3 text-dark">Next-Gen Home Security Camera</p>
+                <div
+                  class="testimonial-name mt-3 bg-white text-light font-weight-bold"
+                  style="
+                    margin: -17px auto 0;
+                    display: table;
+                    background: #0b52d8;
+                    padding: 9px 35px;
+                    border-radius: 20px;
+                    text-align: center;
+                    color: #fff;
+                  "
+                >
+                  Cam-360
+                </div>
                 <a
-            href="non-ptcameye.html"
-            style="
-              display: block;
-              margin: 5px auto;
-              text-decoration: none;
-              color: blue;
-              font-size: 14px;
-              font-weight: normal;
-              text-align: center;
-              transition: transform 0.2s ease-in-out;
-            "
-            onmouseover="this.style.transform='scale(1.1)'"
-            onmouseout="this.style.transform='scale(1)'"
-          >
-          Product Info
-          </a>
-          </div>
+                  href="Cam-360- Description.html"
+                  style="
+                    display: block;
+                    margin: 5px auto;
+                    text-decoration: none;
+                    color: blue;
+                    font-size: 14px;
+                    font-weight: normal;
+                    text-align: center;
+                    transition: transform 0.2s ease-in-out;
+                  "
+                  onmouseover="this.style.transform='scale(1.1)'"
+                  onmouseout="this.style.transform='scale(1)'"
+                >
+                  Product Info
+                </a>
+              </div>
 
-          <!-- TESTIMONIAL 4 -->
-          <div
-            class="item text-center testimonial-item"
-            style="margin-bottom: 20px"
-          >
-            <center>
-              <img
-                class="img-circle"
-                src="img/wireless 2k cam360.png"
-                alt="Wireless 2K Cam 360"
-                style="
-                  display: flex;
-                  width: 220px;
-                  height: 220px;
-                  object-fit: cover;
-                  transform: translateZ(10px);
-                "
-              />
-            </center>
-            <p class="mt-3 text-dark">
-              Wireless CCTV 360° PT Security Camera
-            </p>
-            <div
-              class="testimonial-name mt-3 bg-white text-light font-weight-bold"
-              style="
-                margin: -17px auto 0;
-                display: table;
-                background: #0b52d8;
-                padding: 9px 35px;
-                border-radius: 20px;
-                text-align: center;
-                color: #fff;
-              "
-            >
-              Wireless 2K Cam 360
+
+
+
+
+              <!-- TESTIMONIAL 2 -->
+              <div
+                class="item text-center testimonial-item"
+                style="margin-bottom: 20px"
+              >
+
+              <div class="product-container">
+                <div class="sticker2">In House</div>
+                <center>
+                  <img
+                    class="img-circle"
+                    src="img/NON-PT 2K.png"
+                    alt="NON-PT 2K"
+                    style="
+                      display: flex;
+                      width: 220px;
+                      height: 220px;
+                      object-fit: cover;
+                      transform: translateZ(10px);
+                    "
+                  />
+                </center>
+              </div>
+                <p class="mt-3 text-dark">
+                  High-quality fixed wireless CCTV camera
+                </p>
+                <div
+                  class="testimonial-name mt-3 bg-white text-light font-weight-bold"
+                  style="
+                    margin: -17px auto 0;
+                    display: table;
+                    background: #0b52d8;
+                    padding: 9px 35px;
+                    border-radius: 20px;
+                    text-align: center;
+                    color: #fff;
+                  "
+                >
+                  NON-PT 2K
+                </div>
+                <a
+                  href="Non-PT-2k.html"
+                  style="
+                    display: block;
+                    margin: 5px auto;
+                    text-decoration: none;
+                    color: blue;
+                    font-size: 14px;
+                    font-weight: normal;
+                    text-align: center;
+                    transition: transform 0.2s ease-in-out;
+                  "
+                  onmouseover="this.style.transform='scale(1.1)'"
+                  onmouseout="this.style.transform='scale(1)'"
+                >
+                  Product Info
+                </a>
+              </div>
+
+              <!-- TESTIMONIAL 3 -->
+              <div
+                class="item text-center testimonial-item"
+                style="margin-bottom: 20px"
+              >
+
+              <div class="product-container">
+                <div class="sticker3">Design for <br />customers</div>
+
+                <center>
+                  <img
+                    class="img-circle"
+                    src="img/non-pt cam eye.png"
+                    alt="Non-PT Cam Eye"
+                    style="
+                      display: flex;
+                      width: 220px;
+                      height: 220px;
+                      object-fit: cover;
+                      transform: translateZ(10px);
+                    "
+                  />
+                </center>
+                </div>
+                <p class="mt-3 text-dark">
+                  Non-PT Cam - Wireless CCTV Security Camera for Home
+                </p>
+                <div
+                  class="testimonial-name mt-3 bg-white text-light font-weight-bold"
+                  style="
+                    margin: -17px auto 0;
+                    display: table;
+                    background: #0b52d8;
+                    padding: 9px 35px;
+                    border-radius: 20px;
+                    text-align: center;
+                    color: #fff;
+                  "
+                >
+                  Non-PT Cam
+                </div>
+                <a
+                  href="non-ptcameye.html"
+                  style="
+                    display: block;
+                    margin: 5px auto;
+                    text-decoration: none;
+                    color: blue;
+                    font-size: 14px;
+                    font-weight: normal;
+                    text-align: center;
+                    transition: transform 0.2s ease-in-out;
+                  "
+                  onmouseover="this.style.transform='scale(1.1)'"
+                  onmouseout="this.style.transform='scale(1)'"
+                >
+                  Product Info
+                </a>
+              </div>
+
+              <!-- TESTIMONIAL 4 -->
+              <div
+                class="item text-center testimonial-item"
+                style="margin-bottom: 20px"
+              >
+              <div class="product-container">
+                <div class="sticker4">In House</div>
+
+
+                <center>
+                  <img
+                    class="img-circle"
+                    src="img/wireless 2k cam360.png"
+                    alt="Wireless 2K Cam 360"
+                    style="
+                      display: flex;
+                      width: 220px;
+                      height: 220px;
+                      object-fit: cover;
+                      transform: translateZ(10px);
+                    "
+                  />
+                </center>
+             </div>
+                <p class="mt-3 text-dark">
+                  Wireless CCTV 360° PT Security Camera
+                </p>
+                <div
+                  class="testimonial-name mt-3 bg-white text-light font-weight-bold"
+                  style="
+                    margin: -17px auto 0;
+                    display: table;
+                    background: #0b52d8;
+                    padding: 9px 35px;
+                    border-radius: 20px;
+                    text-align: center;
+                    color: #fff;
+                  "
+                >
+                  Wireless 2K Cam 360
+                </div>
+                <a
+                  href="wireless-2k-cam360.html"
+                  style="
+                    display: block;
+                    margin: 5px auto;
+                    text-decoration: none;
+                    color: blue;
+                    font-size: 14px;
+                    font-weight: normal;
+                    text-align: center;
+                    transition: transform 0.2s ease-in-out;
+                  "
+                  onmouseover="this.style.transform='scale(1.1)'"
+                  onmouseout="this.style.transform='scale(1)'"
+                >
+                  Product Info
+                </a>
+              </div>
+
+              <!-- TESTIMONIAL 5 -->
+              <div
+                class="item text-center testimonial-item"
+                style="margin-bottom: 20px"
+              >
+
+              <div class="product-container">
+                <div class="sticker2">In House</div>
+
+                <center>
+                  <img
+                    class="img-circle"
+                    src="img/wireless cam 2k 3602.png"
+                    alt="Wireless Cam 2K 360"
+                    style="
+                      display: flex;
+                      width: 220px;
+                      height: 220px;
+                      object-fit: cover;
+                      transform: translateZ(10px);
+                    "
+                  />
+                </center>
+
+</div>
+                <p class="mt-3 text-dark">
+                  Wireless CCTV 360° PT Security Camera
+                </p>
+                <div
+                  class="testimonial-name mt-3 bg-white text-light font-weight-bold"
+                  style="
+                    margin: -17px auto 0;
+                    display: table;
+                    background: #0b52d8;
+                    padding: 9px 35px;
+                    border-radius: 20px;
+                    text-align: center;
+                    color: #fff;
+                  "
+                >
+                  Wireless Cam 2K 360
+                </div>
+
+                <a
+                  href="wireless-cam-2k-360.html"
+                  style="
+                    display: block;
+                    margin: 5px auto;
+                    text-decoration: none;
+                    color: blue;
+                    font-size: 14px;
+                    font-weight: normal;
+                    text-align: center;
+                    transition: transform 0.2s ease-in-out;
+                  "
+                  onmouseover="this.style.transform='scale(1.1)'"
+                  onmouseout="this.style.transform='scale(1)'"
+                >
+                  Product Info
+                </a>
+              </div>
             </div>
-            <a
-            href="wireless-2k-cam360.html"
-            style="
-              display: block;
-              margin: 5px auto;
-              text-decoration: none;
-              color: blue;
-              font-size: 14px;
-              font-weight: normal;
-              text-align: center;
-              transition: transform 0.2s ease-in-out;
-            "
-            onmouseover="this.style.transform='scale(1.1)'"
-            onmouseout="this.style.transform='scale(1)'"
-          >
-          Product Info
-          </a>
-
-          </div>
-
-          <!-- TESTIMONIAL 5 -->
-          <div
-            class="item text-center testimonial-item"
-            style="margin-bottom: 20px"
-          >
-            <center>
-              <img
-                class="img-circle"
-                src="img/wireless cam 2k 3602.png"
-                alt="Wireless Cam 2K 360"
-                style="
-                  display: flex;
-                  width: 220px;
-                  height: 220px;
-                  object-fit: cover;
-                  transform: translateZ(10px);
-                "
-              />
-            </center>
-            <p class="mt-3 text-dark">
-              Wireless CCTV 360° PT Security Camera
-            </p>
-            <div
-              class="testimonial-name mt-3 bg-white text-light font-weight-bold"
-              style="
-                margin: -17px auto 0;
-                display: table;
-                background: #0b52d8;
-                padding: 9px 35px;
-                border-radius: 20px;
-                text-align: center;
-                color: #fff;
-              "
-            >
-              Wireless Cam 2K 360
-            </div>
-
-            <a
-            href="wireless-cam-2k-360.html"
-            style="
-              display: block;
-              margin: 5px auto;
-              text-decoration: none;
-              color: blue;
-              font-size: 14px;
-              font-weight: normal;
-              text-align: center;
-              transition: transform 0.2s ease-in-out;
-            "
-            onmouseover="this.style.transform='scale(1.1)'"
-            onmouseout="this.style.transform='scale(1)'"
-          >
-          Product Info
-          </a>
           </div>
         </div>
       </div>
-    </div>
-  </div>
-</section>
+    </section>
 
+    <!-- product Slider start -->
 
-
-<!-- product Slider start -->
-
-<div class="container text-center wow fadeIn" data-wow-delay="0.5s">
-    <div class="row">
+    <div class="container text-center wow fadeIn" data-wow-delay="0.5s">
+      <div class="row">
         <div class="col-lg-12 my-4">
-            <div class="section-title">
-                <h1 class="display-5 mb-3">Our <span style="color: #023ba4;">Partners</span></h1>
-                <div class="bg-primary mx-auto mb-3" style="width: 60px; height: 2px;"></div>
-            </div>
+          <div class="section-title">
+            <h1 class="display-5 mb-3">
+              Our <span style="color: #023ba4">Partners</span>
+            </h1>
+            <div
+              class="bg-primary mx-auto mb-3"
+              style="width: 60px; height: 2px"
+            ></div>
+          </div>
         </div>
-    </div>
+      </div>
 
-    <div class="logos">
+      <div class="logos">
         <div class="logo_items">
-            <img src="img/OMNIVISION.jpg" alt="Client 1">
-            <img src="img/client logo 1.jpg" alt="Client 1">
-            <img src="img/client logo 2.jpg" alt="Client 2">
-            <img src="img/client logo 3.png" alt="Client 3">
-            <img src="img/OMNIVISION.jpg" alt="Client 1">
-            <img src="img/client logo 1.jpg" alt="Client 1">
-            <img src="img/client logo 2.jpg" alt="Client 2">
-            <img src="img/client logo 3.png" alt="Client 3">
-            <img src="img/client logo 1.jpg" alt="Client 1">
-            <img src="img/client logo 2.jpg" alt="Client 2">
-            <img src="img/client logo 3.png" alt="Client 3">
+          <img src="img/OMNIVISION.jpg" alt="Client 1" />
+          <img src="img/client logo 1.jpg" alt="Client 1" />
+          <img src="img/client logo 2.jpg" alt="Client 2" />
+          <img src="img/client logo 3.png" alt="Client 3" />
+          <img src="img/OMNIVISION.jpg" alt="Client 1" />
+          <img src="img/client logo 1.jpg" alt="Client 1" />
+          <img src="img/client logo 2.jpg" alt="Client 2" />
+          <img src="img/client logo 3.png" alt="Client 3" />
+          <img src="img/client logo 1.jpg" alt="Client 1" />
+          <img src="img/client logo 2.jpg" alt="Client 2" />
+          <img src="img/client logo 3.png" alt="Client 3" />
         </div>
+      </div>
     </div>
-</div>
 
- 
-<!-- product Slider End -->
+    <!-- product Slider End -->
 
-
-
-<!-- 
+    <!-- 
 
   
     <div class="container-fluid bg-light overflow-hidden my-5 px-lg-0 wow fadeIn" data-wow-delay="0.5s">
@@ -1294,16 +1492,13 @@
         </div>
     </div> -->
 
-
     <!-- Projects Start -->
 
     <!-- Projects End -->
 
-
     <!-- Quote Start -->
 
     <!-- Quote End -->
-
 
     <!-- Team Start -->
     <!-- <div class="container-xxl py-5">
@@ -1382,7 +1577,6 @@
     </div> -->
     <!-- Team End -->
 
-
     <!-- Testimonial Start -->
     <!-- <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
         <div class="container">
@@ -1411,78 +1605,136 @@
     </div> -->
     <!-- Testimonial End -->
 
-<!-- Footer Start -->
-<div class="container-fluid footer py-5 wow fadeIn mt-5 pb-4" data-wow-delay="0.1s" style="background-color: #042c77; color: white;">
-    <div class="container py-5">
+    <!-- Footer Start -->
+    <div
+      class="container-fluid footer py-5 wow fadeIn mt-5 pb-4"
+      data-wow-delay="0.1s"
+      style="background-color: #042c77; color: white"
+    >
+      <div class="container py-5">
         <div class="row g-5">
-            <div class="col-lg-4 col-md-6">
-                 <!-- Logo -->
-                 <div class="mb-4">
-                    <img src="img/actoan logo.png" alt="Company Logo" style="max-width: 72px; height: auto;">
-                </div>
-                <h5 class="mb-4" style="color: white; font-size: 18px; margin-top: 20px;">Address</h5>
-                <p class="mb-2" style="font-size: 14px;"><i class="fa fa-map-marker-alt me-3"></i>Wave One, Gold Office, G1-25/11, 25th Floor, Sector -18, Noida, Uttar Pradesh-201301, India</p>
-                <p class="mb-2" style="font-size: 14px;"><i class="fa fa-envelope me-3"></i>info@actoan.in</p>
-               
+          <div class="col-lg-4 col-md-6">
+            <!-- Logo -->
+            <div class="mb-4">
+              <img
+                src="img/actoan logo.png"
+                alt="Company Logo"
+                style="max-width: 72px; height: auto"
+              />
             </div>
-            <div class="col-lg-4 col-md-6">
-                
-                <h5 class="mb-4" style="color: white; font-size: 18px; margin-top: 20px;">Services</h5>
-                <a class="btn btn-link" href="Software Product Engineering.html" style="color: white; text-decoration: none; font-size: 14px;">Software Product Engineering</a><br>
-                <a class="btn btn-link" href="Hardware Product Engineering.html" style="color: white; text-decoration: none; font-size: 14px;">Hardware Product Engineering</a><br>    
-                <a class="btn btn-link" href="Testing and Validation.html" style="color: white; text-decoration: none; font-size: 14px;">Testing and Validation</a><br>
-                <a class="btn btn-link" href="Electronic Manufacturing and Sourcing Services.html" style="color: white; text-decoration: none; font-size: 14px;">Electronic Manufacturing and <br>Sourcing Services</a>
-                <a class="btn btn-link" href="Kernel Engineering, Porting and Migration.html" style="color: white; text-decoration: none; font-size: 14px;">Kernel Engineering,<br> Porting and Migration</a><br>
-     
-
-                
-            </div>
-            <div class="col-lg-4 col-md-6">
-                <h5 class="mb-4" style="color: white; font-size: 18px; margin-top: 20px;">Quick Links</h5>
-                <a class="btn btn-link" href="about.html" style="color: white; text-decoration: none; font-size: 14px;">About Us</a><br>
-                <a class="btn btn-link" href="contact.html" style="color: white; text-decoration: none; font-size: 14px;">Contact Us</a><br>
-                <a class="btn btn-link" href="career.html" style="color: white; text-decoration: none; font-size: 14px;">Career</a><br>
-              
-            </div>
+            <h5
+              class="mb-4"
+              style="color: white; font-size: 18px; margin-top: 20px"
+            >
+              Address
+            </h5>
+            <p class="mb-2" style="font-size: 14px">
+              <i class="fa fa-map-marker-alt me-3"></i>Wave One, Gold Office,
+              G1-25/11, 25th Floor, <br />Sector -18, Noida, Uttar
+              Pradesh-201301, India
+            </p>
+            <p class="mb-2" style="font-size: 14px">
+              <i class="fa fa-envelope me-3"></i>info@actoan.in
+            </p>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <h5
+              class="mb-4"
+              style="color: white; font-size: 18px; margin-top: 20px"
+            >
+              Services
+            </h5>
+            <a
+              class="btn btn-link"
+              href="Software Product Engineering.html"
+              style="color: white; text-decoration: none; font-size: 14px"
+              >Software Product Engineering</a
+            ><br />
+            <a
+              class="btn btn-link"
+              href="Hardware Product Engineering.html"
+              style="color: white; text-decoration: none; font-size: 14px"
+              >Hardware Product Engineering</a
+            ><br />
+            <a
+              class="btn btn-link"
+              href="Testing and Validation.html"
+              style="color: white; text-decoration: none; font-size: 14px"
+              >Testing and Validation</a
+            ><br />
+            <a
+              class="btn btn-link"
+              href="Electronic Manufacturing and Sourcing Services.html"
+              style="color: white; text-decoration: none; font-size: 14px"
+              >Electronic Manufacturing and <br />Sourcing Services</a
+            >
+            <a
+              class="btn btn-link"
+              href="Kernel Engineering, Porting and Migration.html"
+              style="color: white; text-decoration: none; font-size: 14px"
+              >Kernel Engineering,<br />
+              Porting and Migration</a
+            ><br />
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <h5
+              class="mb-4"
+              style="color: white; font-size: 18px; margin-top: 20px"
+            >
+              Quick Links
+            </h5>
+            <a
+              class="btn btn-link"
+              href="about.html"
+              style="color: white; text-decoration: none; font-size: 14px"
+              >About Us</a
+            ><br />
+            <a
+              class="btn btn-link"
+              href="contact.html"
+              style="color: white; text-decoration: none; font-size: 14px"
+              >Contact Us</a
+            ><br />
+            <a
+              class="btn btn-link"
+              href="career.html"
+              style="color: white; text-decoration: none; font-size: 14px"
+              >Career</a
+            ><br />
+          </div>
         </div>
+      </div>
     </div>
-</div>
-<!-- Footer End -->
-
-
+    <!-- Footer End -->
 
     <!-- Copyright Start -->
-    <div class="container-fluid py-4" style="background: #000000;">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                        <center>
-                        &copy; <a class="border-bottom" href="index.html">Actoan</a>, All Right Reserved.
-                    </center>
-                    </div>
-
-            </div>
+    <div class="container-fluid py-4" style="background: #000000">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+            <center>
+              &copy; <a class="border-bottom" href="index.html">Actoan</a>, All
+              Right Reserved.
+            </center>
+          </div>
         </div>
+      </div>
     </div>
     <!-- Copyright End -->
 
-
     <!-- Back to Top -->
-    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i
-            class="bi bi-arrow-up"></i></a>
+    <a
+      href="#"
+      class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"
+      ><i class="bi bi-arrow-up"></i
+    ></a>
 
-    
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
-        
 
-
-
-        
     <!-- JavaScript Libraries -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-
 
     <!-- JavaScript Libraries -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
@@ -1497,17 +1749,13 @@
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
 
-   
     <script
-    src="https://code.jquery.com/jquery-3.3.1.min.js"
-    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-    crossorigin="anonymous"
-  ></script>
+      src="https://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous"
+    ></script>
 
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
-  
-
-</body>
-
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
 </html>
