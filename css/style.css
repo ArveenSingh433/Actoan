@@ -1269,3 +1269,67 @@
         padding: 12px;
     }
 }
+
+
+
+.sticker {
+    position: absolute;
+    top: 30px;
+    left: -10px;
+    background: red;
+    color: white;
+    font-size: 11px;
+    font-weight: bold;
+    padding: 8px 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  .product-container {
+    position: relative; /* To position the sticker */
+    display: inline-block;
+  }
+
+
+  .sticker2 {
+    position: absolute;
+    top: 30px;
+    left: -34px;
+    background: red;
+    color: white;
+    font-size: 11px;
+    font-weight: bold;
+    padding: 8px 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  }
+
+
+
+  .sticker3 {
+    position: absolute;
+
+    top: 30px;
+    left: -20px;
+    background: red;
+    color: white;
+    font-size: 11px;
+    font-weight: bold;
+    padding: 8px 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  }
+
+  .sticker4 {
+    position: absolute;
+
+    top: 30px;
+    left: -25px;
+    background: red;
+    color: white;
+    font-size: 11px;
+    font-weight: bold;
+    padding: 8px 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  }
